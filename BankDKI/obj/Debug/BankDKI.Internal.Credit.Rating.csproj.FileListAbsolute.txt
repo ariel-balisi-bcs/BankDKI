@@ -28,6 +28,5 @@ F:\Bank DKI Source Project\BankDKI\BankDKI\bin\System.Web.Razor.xml
 F:\Bank DKI Source Project\BankDKI\BankDKI\bin\System.Web.WebPages.xml
 F:\Bank DKI Source Project\BankDKI\BankDKI\bin\System.Web.WebPages.Deployment.xml
 F:\Bank DKI Source Project\BankDKI\BankDKI\bin\System.Web.WebPages.Razor.xml
-F:\Bank DKI Source Project\BankDKI\BankDKI\obj\Debug\BankDKI.Internal.Credit.Rating.csprojResolveAssemblyReference.cache
 F:\Bank DKI Source Project\BankDKI\BankDKI\obj\Debug\BankDKI.dll
 F:\Bank DKI Source Project\BankDKI\BankDKI\obj\Debug\BankDKI.pdb
