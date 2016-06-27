@@ -1040,14 +1040,6 @@
 .glyphicon-menu-up:before {
   content: "\e260";
 }
-.btn {
-  width: 200px;
-  height: 30px;
-  color: #ffffff;
-}
-.btn-red {
-  background: #da2126;
-}
 body {
   font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
   font-size: 19px;
@@ -1095,4 +1087,12 @@ a:hover {
 .headers {
   font-size: 24px;
   color: #545454;
+}
+.btn {
+  width: 200px;
+  height: 30px;
+  color: #ffffff;
+}
+.btn-red {
+  background: #da2126;
 }
