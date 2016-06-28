@@ -35,6 +35,30 @@ namespace BankDKI
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/styles/css/main.css"));
 
+            bundles.Add(new StyleBundle("~/css/logIn").Include(
+                        "~/Content/styles/css/logIn.css"));
+
+            bundles.Add(new StyleBundle("~/css/clientSelect").Include(
+                        "~/Content/styles/css/clientSelect.css"));
+
+            bundles.Add(new StyleBundle("~/css/financialInfo").Include(
+                        "~/Content/styles/css/financialInfo.css"));
+
+            bundles.Add(new StyleBundle("~/css/financialProjection").Include(
+                        "~/Content/styles/css/financialProjection.css"));
+
+            bundles.Add(new StyleBundle("~/css/accountingInfo").Include(
+                        "~/Content/styles/css/accountingInfo.css"));
+
+            bundles.Add(new StyleBundle("~/css/sensitivity").Include(
+                        "~/Content/styles/css/sensitivity.css"));
+
+            bundles.Add(new StyleBundle("~/css/creditAnalysis").Include(
+                        "~/Content/styles/css/creditAnalysis.css"));
+
+            bundles.Add(new StyleBundle("~/css/industryComparison").Include(
+                        "~/Content/styles/css/industryComparison.css"));
+
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",

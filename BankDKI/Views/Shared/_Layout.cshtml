@@ -6,9 +6,11 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/css/lib")
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/css/" + @ViewBag.Active)
+
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body id="@ViewBag.Active">
     @RenderSection("header")
     @RenderSection("content")
 
