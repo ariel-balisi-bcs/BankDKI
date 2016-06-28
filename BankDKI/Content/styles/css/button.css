@@ -1061,7 +1061,7 @@ a:hover {
   text-decoration: none;
 }
 .content-wrapper {
-  max-width: 1160px;
+  width: 1160px;
   margin: 0 auto;
   background: #ffffff;
 }
@@ -1087,6 +1087,37 @@ a:hover {
 .headers {
   font-size: 24px;
   color: #545454;
+}
+nav {
+  margin-bottom: 30px;
+}
+nav ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  width: 16.59%;
+  list-style: none;
+  float: left;
+  margin-left: 1px;
+  text-align: center;
+}
+nav ul li:first-child {
+  margin-left: 0;
+}
+nav ul li a {
+  line-height: 50px;
+  background: #4f4f4f;
+  color: #ffffff;
+  font-size: 13px;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+}
+nav ul li a:hover {
+  background: #da2126;
+  color: #ffffff;
 }
 .btn {
   width: 200px;
