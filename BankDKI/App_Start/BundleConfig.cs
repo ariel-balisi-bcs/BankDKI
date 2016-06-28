@@ -22,6 +22,9 @@ namespace BankDKI
                         "~/Content/scripts/lib/jquery.min.js",
                         "~/Content/scripts/lib/bootstrap.min.js"));
 
+            bundles.Add(new ScriptBundle("~/js/global").Include(
+                        "~/Content/scripts/nav.js"));
+
             bundles.Add(new StyleBundle("~/css/lib").Include(
                         "~/Content/styles/lib/bootstrap.min.css"));
 

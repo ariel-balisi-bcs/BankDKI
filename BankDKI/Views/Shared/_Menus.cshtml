@@ -1,21 +1,21 @@
-﻿<nav>
+﻿<nav class="@ViewBag.Active">
     <ul>
-        <li>
+        <li class="financialInfo">
             @Html.ActionLink("Financial Information", "Information", "Financial")
         </li>
-        <li>
+        <li class="financialProjection">
             @Html.ActionLink("Financial Projection", "Projection", "Financial")
         </li>
-        <li>
+        <li class="AccountingInfo">
             @Html.ActionLink("Accounting Information", "Information", "Accounting")
         </li>
-        <li>
+        <li class="sensitivity">
             @Html.ActionLink("Sensitivity Analysis", "Index", "Sensitivity")
         </li>
-        <li>
+        <li class="CreditAnalysis">
             @Html.ActionLink("Credit Analysis", "Index", "CreditAnalysis")
         </li>
-        <li>
+        <li class="IndustryComparison">
             @Html.ActionLink("Industry Comparison", "Index", "IndustryComparison")
         </li>
     </ul>

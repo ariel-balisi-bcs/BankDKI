@@ -1094,6 +1094,25 @@ nav ul li {
 nav ul li:first-child {
   margin-left: 0;
 }
+nav ul li.active a {
+  position: relative;
+  background: #da2126;
+}
+nav ul li.active a:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #da2126;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: -10px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 nav ul li a {
   line-height: 50px;
   background: #4f4f4f;
