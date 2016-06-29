@@ -13,7 +13,296 @@
     <div class="content-wrapper">
         @Html.Partial("_Menus")
 
-        <h1>Accounting Information</h1>
-        <div>This is a test only page. Check if less is working.</div>
+        <div class="main-context-box">
+            <h1>Ratio Comparison</h1>
+
+            <div id="comparison-table">
+                <div class="cmp-tab-head">
+                    <div class="cmp-tab-cell row-head"></div>
+                    <div class="cmp-tab-cell">Projected<span class="year-label">2000</span></div>
+                    <div class="cmp-tab-cell">Projected<span class="year-label">2001</span></div>
+                    <div class="cmp-tab-cell">Projected<span class="year-label">2002</span></div>
+                    <div class="cmp-tab-cell">Projected<span class="year-label">2003</span></div>
+                    <div class="cmp-tab-cell">Projected<span class="year-label">2004</span></div>
+                    <div class="cmp-tab-cell">Industry Ave.<span class="year-label">1998</span></div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell section-head">Liquidity Ratios:</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Current Ratio</div>
+                    <div class="cmp-tab-cell">3.43</div>
+                    <div class="cmp-tab-cell">4.02</div>
+                    <div class="cmp-tab-cell">4.62</div>
+                    <div class="cmp-tab-cell">5.16</div>
+                    <div class="cmp-tab-cell">5.53</div>
+                    <div class="cmp-tab-cell">1.40</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Quick Ratio</div>
+                    <div class="cmp-tab-cell">1.36</div>
+                    <div class="cmp-tab-cell">1.61</div>
+                    <div class="cmp-tab-cell">1.90</div>
+                    <div class="cmp-tab-cell">1.84</div>
+                    <div class="cmp-tab-cell">1.68</div>
+                    <div class="cmp-tab-cell">0.20</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Sales / Receivables</div>
+                    <div class="cmp-tab-cell">85.88</div>
+                    <div class="cmp-tab-cell">85.88</div>
+                    <div class="cmp-tab-cell">85.88</div>
+                    <div class="cmp-tab-cell">85.88</div>
+                    <div class="cmp-tab-cell">85.88</div>
+                    <div class="cmp-tab-cell">87.10</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Days' Receivables</div>
+                    <div class="cmp-tab-cell">4.25</div>
+                    <div class="cmp-tab-cell">4.25</div>
+                    <div class="cmp-tab-cell">4.25</div>
+                    <div class="cmp-tab-cell">4.25</div>
+                    <div class="cmp-tab-cell">4.25</div>
+                    <div class="cmp-tab-cell">4.19</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Cost of Sales / Inventory</div>
+                    <div class="cmp-tab-cell">9.12</div>
+                    <div class="cmp-tab-cell">8.11</div>
+                    <div class="cmp-tab-cell">7.30</div>
+                    <div class="cmp-tab-cell">6.08</div>
+                    <div class="cmp-tab-cell">5.21</div>
+                    <div class="cmp-tab-cell">3.10</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Days' Inventory</div>
+                    <div class="cmp-tab-cell">40.00</div>
+                    <div class="cmp-tab-cell">45.00</div>
+                    <div class="cmp-tab-cell">50.00</div>
+                    <div class="cmp-tab-cell">60.00</div>
+                    <div class="cmp-tab-cell">70.00</div>
+                    <div class="cmp-tab-cell">117.74</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Cost of Sales / Payables</div>
+                    <div class="cmp-tab-cell">40.56</div>
+                    <div class="cmp-tab-cell">40.56</div>
+                    <div class="cmp-tab-cell">40.56</div>
+                    <div class="cmp-tab-cell">40.56</div>
+                    <div class="cmp-tab-cell">40.56</div>
+                    <div class="cmp-tab-cell">40.70</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Days' Payables</div>
+                    <div class="cmp-tab-cell">9.00</div>
+                    <div class="cmp-tab-cell">9.00</div>
+                    <div class="cmp-tab-cell">9.00</div>
+                    <div class="cmp-tab-cell">9.00</div>
+                    <div class="cmp-tab-cell">9.00</div>
+                    <div class="cmp-tab-cell">8.97</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Sales / Work Capital</div>
+                    <div class="cmp-tab-cell">8.95</div>
+                    <div class="cmp-tab-cell">7.64</div>
+                    <div class="cmp-tab-cell">6.64</div>
+                    <div class="cmp-tab-cell">5.93</div>
+                    <div class="cmp-tab-cell">5.52</div>
+                    <div class="cmp-tab-cell">12.00</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">EBIT / Interest</div>
+                    <div class="cmp-tab-cell">4.48</div>
+                    <div class="cmp-tab-cell">8.88</div>
+                    <div class="cmp-tab-cell">13.13</div>
+                    <div class="cmp-tab-cell">17.79</div>
+                    <div class="cmp-tab-cell">23.12</div>
+                    <div class="cmp-tab-cell">2.10</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Net Profit + Depr + Amort/CLTD</div>
+                    <div class="cmp-tab-cell">4.85</div>
+                    <div class="cmp-tab-cell">7.91</div>
+                    <div class="cmp-tab-cell">9.66</div>
+                    <div class="cmp-tab-cell">10.68</div>
+                    <div class="cmp-tab-cell">11.10</div>
+                    <div class="cmp-tab-cell">5.20</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell section-head">Leverage Ratios:</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Fixed Assets / Tangible Net Worth</div>
+                    <div class="cmp-tab-cell">0.14</div>
+                    <div class="cmp-tab-cell">0.08</div>
+                    <div class="cmp-tab-cell">0.04</div>
+                    <div class="cmp-tab-cell">0.02</div>
+                    <div class="cmp-tab-cell">0.01</div>
+                    <div class="cmp-tab-cell">0.30</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Debt / Worth</div>
+                    <div class="cmp-tab-cell">2.25</div>
+                    <div class="cmp-tab-cell">1.25</div>
+                    <div class="cmp-tab-cell">0.80</div>
+                    <div class="cmp-tab-cell">0.57</div>
+                    <div class="cmp-tab-cell">0.43</div>
+                    <div class="cmp-tab-cell">2.70</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell section-head">Operating Ratios:</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Profit Before Tax / Tan. Net Worth</div>
+                    <div class="cmp-tab-cell">62.20%</div>
+                    <div class="cmp-tab-cell">75.68%</div>
+                    <div class="cmp-tab-cell">71.12%</div>
+                    <div class="cmp-tab-cell">65.76%</div>
+                    <div class="cmp-tab-cell">61.26%</div>
+                    <div class="cmp-tab-cell">22.00%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Profit Before Tax / Total Assets</div>
+                    <div class="cmp-tab-cell">18.97%</div>
+                    <div class="cmp-tab-cell">33.52%</div>
+                    <div class="cmp-tab-cell">39.37%</div>
+                    <div class="cmp-tab-cell">41.84%</div>
+                    <div class="cmp-tab-cell">42.72%</div>
+                    <div class="cmp-tab-cell">5.10%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Sales / Net Fixed Assets</div>
+                    <div class="cmp-tab-cell">115.89%</div>
+                    <div class="cmp-tab-cell">128.59%</div>
+                    <div class="cmp-tab-cell">182.09%</div>
+                    <div class="cmp-tab-cell">271.25%</div>
+                    <div class="cmp-tab-cell">454.57%</div>
+                    <div class="cmp-tab-cell">3.73%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Sales / Total Assets</div>
+                    <div class="cmp-tab-cell">5.02%</div>
+                    <div class="cmp-tab-cell">4.69%</div>
+                    <div class="cmp-tab-cell">4.45%</div>
+                    <div class="cmp-tab-cell">4.23%</div>
+                    <div class="cmp-tab-cell">4.06%</div>
+                    <div class="cmp-tab-cell">2.80%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell section-head">Other Ratios / Numbers:</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Officers Salaries (Actual)</div>
+                    <div class="cmp-tab-cell">$30,000</div>
+                    <div class="cmp-tab-cell">$31,500</div>
+                    <div class="cmp-tab-cell">$33,233</div>
+                    <div class="cmp-tab-cell">$35,160</div>
+                    <div class="cmp-tab-cell">$37,270</div>
+                    <div class="cmp-tab-cell">N/A</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Equity (Net Worth)</div>
+                    <div class="cmp-tab-cell">$120,449</div>
+                    <div class="cmp-tab-cell">$206,492</div>
+                    <div class="cmp-tab-cell">$310,513</div>
+                    <div class="cmp-tab-cell">$421,212</div>
+                    <div class="cmp-tab-cell">$528,274</div>
+                    <div class="cmp-tab-cell">N/A</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Loans Balance (Actual)</div>
+                    <div class="cmp-tab-cell">$188,209</div>
+                    <div class="cmp-tab-cell">$175,086</div>
+                    <div class="cmp-tab-cell">$160,481</div>
+                    <div class="cmp-tab-cell">$144,226</div>
+                    <div class="cmp-tab-cell">$126,135</div>
+                    <div class="cmp-tab-cell">N/A</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">% Deprec. Amort. / Sales</div>
+                    <div class="cmp-tab-cell">0.00</div>
+                    <div class="cmp-tab-cell">0.00</div>
+                    <div class="cmp-tab-cell">0.00</div>
+                    <div class="cmp-tab-cell">0.00</div>
+                    <div class="cmp-tab-cell">0.00</div>
+                    <div class="cmp-tab-cell">0.60</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">% Officers Compensation / Sales</div>
+                    <div class="cmp-tab-cell">0.02</div>
+                    <div class="cmp-tab-cell">0.01</div>
+                    <div class="cmp-tab-cell">0.01</div>
+                    <div class="cmp-tab-cell">0.01</div>
+                    <div class="cmp-tab-cell">0.01</div>
+                    <div class="cmp-tab-cell">0.02</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Tangible Net Worth (NW - Intangibles)</div>
+                    <div class="cmp-tab-cell">$117,249</div>
+                    <div class="cmp-tab-cell">$204,092</div>
+                    <div class="cmp-tab-cell">$308,963</div>
+                    <div class="cmp-tab-cell">$420,412</div>
+                    <div class="cmp-tab-cell">$528,274</div>
+                    <div class="cmp-tab-cell">N/A</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Working Capital (Actual)</div>
+                    <div class="cmp-tab-cell">$215,685</div>
+                    <div class="cmp-tab-cell">$282,766</div>
+                    <div class="cmp-tab-cell">$374,540</div>
+                    <div class="cmp-tab-cell">$471,239</div>
+                    <div class="cmp-tab-cell">$557,508</div>
+                    <div class="cmp-tab-cell">N/A</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell section-head">Gross Profit <br />Key Percentages as a Percent of Gross Profit</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Rent</div>
+                    <div class="cmp-tab-cell">15.07%</div>
+                    <div class="cmp-tab-cell">14.12%</div>
+                    <div class="cmp-tab-cell">12.96%</div>
+                    <div class="cmp-tab-cell">12.19%</div>
+                    <div class="cmp-tab-cell">11.74%</div>
+                    <div class="cmp-tab-cell">0.00%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Interest Paid</div>
+                    <div class="cmp-tab-cell">4.38%</div>
+                    <div class="cmp-tab-cell">3.66%</div>
+                    <div class="cmp-tab-cell">2.94%</div>
+                    <div class="cmp-tab-cell">2.38%</div>
+                    <div class="cmp-tab-cell">1.92%</div>
+                    <div class="cmp-tab-cell">0.00%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Depreciation & Amortization</div>
+                    <div class="cmp-tab-cell">1.60%</div>
+                    <div class="cmp-tab-cell">1.49%</div>
+                    <div class="cmp-tab-cell">1.36%</div>
+                    <div class="cmp-tab-cell">1.28%</div>
+                    <div class="cmp-tab-cell">1.22%</div>
+                    <div class="cmp-tab-cell">0.00%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Officers Compensation</div>
+                    <div class="cmp-tab-cell">6.28%</div>
+                    <div class="cmp-tab-cell">5.89%</div>
+                    <div class="cmp-tab-cell">5.40%</div>
+                    <div class="cmp-tab-cell">5.08%</div>
+                    <div class="cmp-tab-cell">4.89%</div>
+                    <div class="cmp-tab-cell">0.00%</div>
+                </div>
+                <div class="cmp-tab-row">
+                    <div class="cmp-tab-cell row-head">Taxes Paid</div>
+                    <div class="cmp-tab-cell">3.53%</div>
+                    <div class="cmp-tab-cell">8.76%</div>
+                    <div class="cmp-tab-cell">11.54%</div>
+                    <div class="cmp-tab-cell">13.29%</div>
+                    <div class="cmp-tab-cell">14.37%</div>
+                    <div class="cmp-tab-cell">N/A</div>
+                </div>
+            </div>
+        </div>
     </div>
 }
