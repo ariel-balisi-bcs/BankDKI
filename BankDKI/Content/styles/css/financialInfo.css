@@ -1,1 +1,32 @@
-﻿
+﻿#financialInfo .entryLoanInfo {
+  display: flex;
+  margin-bottom: 20px;
+}
+#financialInfo .entryLoanInfo > div {
+  float: left;
+}
+#financialInfo .entryLoanInfo > div h3 {
+  margin-bottom: 15px;
+}
+#financialInfo .entryLoanInfo > div p strong {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+}
+#financialInfo .entryLoanInfo > div.entry {
+  margin-right: 5px;
+}
+#financialInfo .entryLoanInfo > div.loan {
+  margin-left: 5px;
+}
+#financialInfo .balanceCash {
+  display: flex;
+  margin-top: 20px;
+}
+#financialInfo .balanceCash .balanceSheet {
+  margin-right: 5px;
+}
+#financialInfo .balanceCash .cashFlow {
+  margin-left: 5px;
+}
+#financialInfo .balanceCash .header p strong {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+}

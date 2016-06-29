@@ -11,18 +11,41 @@
 @section content
 {
     <div class="content-wrapper">
-    @Html.Partial("_Menus")
+        @Html.Partial("_Menus")
 
-        <div class="col col-md-6 bordered">
-            asdf
+        <!-- Entry and Loan Information -->
+        <div class="entryLoanInfo">
+            <div class="col col-md-6 bordered entry contentPadding">
+                <div class="col col-md-7">
+                    <h3>Entry Information</h3>
+                    <h5>Client Name</h5>
+                    <p>Details of the selected entity</p>
+                </div>
+                <div class="col col-md-5 text-right">
+                    <img src="~/Content/images/logoTheCompany.jpg" alt="The Company Logo" />
+                </div>
+            </div>
+            <div class="col col-md-6 bordered loan contentPadding">
+                <h3>Loan Information</h3>
+                <div class="col col-md-7">
+                    <p>Loan Amount</p>
+                    <p>Aproved Date</p>
+                    <p><strong>Balance</strong></p>
+                </div>
+                <div class="col col-md-5 text-right">
+                    <p>$999,999.00</p>
+                    <p>May 10, 2015</p>
+                    <p><strong>$ 99,999.00</strong></p>
+                </div>
+            </div>
         </div>
-        <div class="col col-md-6 bordered">
-            fdsa
-        </div>
+        <!-- END: Entry and Loan Information -->
 
+        <!-- Payment Details -->
         <div class="bordered">
+            <h3 class="headerAbove contentPadding">Payment Details</h3>
             <div class="table center alternate">
-                <div>
+                <div class="head">
                     <div>Transaction Date</div>
                     <div>Transaction Type</div>
                     <div>Transaction Amount</div>
@@ -51,6 +74,72 @@
                     <div>Payment</div>
                     <div>$100</div>
                     <div>Sample Details</div>
+                </div>
+            </div>
+        </div>
+        <!-- END: Payment Details -->
+
+        <!-- Balance Sheet and Cash Flow -->
+        <div class="balanceCash">
+            <div class="col col-md-6 bordered balanceSheet">
+                <div class="header contentPadding">
+                    <div class="col col-md-8">
+                        <h3>England Tours Company</h3>
+                        <p>Balance Sheet</p>
+                    </div>
+                    <div class="col col-md-4 text-right">
+                        <p><strong>December 31, 20X3</strong></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="contentPadding">
+                    <div class="table">
+                        <div>
+                            <div>Assets</div>
+                            <div class="text-right"></div>
+                            <div class="text-right"></div>
+                        </div>
+                        <div>
+                            <div>Cash</div>
+                            <div class="text-right"></div>
+                            <div class="text-right">$ 15,500</div>
+                        </div>
+                        <div>
+                            <div>Accounts receivable</div>
+                            <div class="text-right"></div>
+                            <div class="text-right">4,500</div>
+                        </div>
+                        <div>
+                            <div>Equipment</div>
+                            <div class="text-right">$ 45,000</div>
+                            <div class="text-right"></div>
+                        </div>
+                        <div>
+                            <div>Less: Accum. depreciation</div>
+                            <div class="text-right red text-underline"><strong>(5,000)</strong></div>
+                            <div class="text-right">40,000</div>
+                        </div>
+                        <div>
+                            <div>Total assets</div>
+                            <div class="text-right"></div>
+                            <div class="text-right">$ 60,000</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-6 bordered cashFlow">
+                <div class="header contentPadding">
+                    <div class="col col-md-8">
+                        <h3>Cash Flow Statement</h3>
+                        <p>Company XYZ</p>
+                    </div>
+                    <div class="col col-md-4 text-right">
+                        <p><strong>FY Ended 31 Dec 2003</strong></p>
+                        <p>all figures in USD</p>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>

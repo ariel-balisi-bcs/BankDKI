@@ -1062,6 +1062,26 @@ h5,
 h6 {
   margin: 0;
 }
+h1 {
+  font-size: 34px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 26px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 18px;
+}
+p {
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 15px;
+  margin: 0;
+}
 a {
   color: #da2126;
 }
@@ -1092,9 +1112,21 @@ a:hover {
 #header .log a {
   margin-left: 30px;
 }
-.headers {
-  font-size: 24px;
-  color: #545454;
+.header {
+  background: #898989;
+  color: #ffffff;
+}
+.red {
+  color: #da2126;
+}
+.white {
+  color: #ffffff;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.text-no-underline {
+  text-decoration: none;
 }
 nav {
   margin-bottom: 30px;
@@ -1149,6 +1181,9 @@ nav ul li a:hover {
 .bordered {
   border: 1px solid #b7b7b7;
 }
+.contentPadding {
+  padding: 15px;
+}
 .table {
   display: table;
   margin-bottom: 0;
@@ -1159,11 +1194,11 @@ nav ul li a:hover {
 .table > div > div {
   font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
   font-size: 14px;
-  line-height: 25px;
+  line-height: 17px;
   display: table-cell;
   padding: 4px;
 }
-.table > div:first-child div {
+.table > div.head div {
   font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
   background: #898989;
   border-left: 1px solid #ffffff;
@@ -1171,7 +1206,7 @@ nav ul li a:hover {
   color: #ffffff;
   line-height: 32px;
 }
-.table > div:first-child div:first-child {
+.table > div.head div:first-child {
   border-left: none;
 }
 .table.center {

@@ -1,4 +1,4 @@
-﻿@import 'main.less';
+﻿@import 'variable.less';
 
 .content-wrapper{
     width:1160px;
@@ -29,9 +29,25 @@
     }
 }
    
-.headers{
-    font-size: 24px;
-    color:@headerColor;
+.header{
+    background:@contentHeaderBg;
+    color:@white;
+}
+
+.red{
+    color:@red;
+}
+
+.white{
+    color:@white;
+}
+
+.text-underline{
+    text-decoration:underline;
+}
+
+.text-no-underline{
+    text-decoration:none;
 }
 
 nav {
@@ -98,6 +114,10 @@ nav {
     border:@contentBorder;
 }
 
+.contentPadding{
+    padding:15px;
+}
+
 .table{
     display:table;
     margin-bottom:0;
@@ -108,13 +128,13 @@ nav {
         > div{
             font-family: @bookFontFamily;
             font-size:14px;
-            line-height:25px;
+            line-height:17px;
             display:table-cell;
             padding:4px;
 
         }
 
-        &:first-child{
+        &.head{
             div{
                 font-family: @baseFontFamily;
                 background: @contentHeaderBg;

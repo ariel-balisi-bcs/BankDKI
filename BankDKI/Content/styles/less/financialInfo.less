@@ -1,3 +1,50 @@
-﻿#financialInfo{
+﻿@import 'variable.less';
+
+#financialInfo{
+    .entryLoanInfo{
+        display:flex;
+        margin-bottom:20px;
+
+        > div{
+            float:left;
+
+            h3{
+                margin-bottom:15px;
+            }
+
+            p{
+                strong{
+                    font-family:@baseFontFamily;
+                }
+            }
+
+            &.entry{
+                margin-right:5px;
+            }
+
+            &.loan{
+                margin-left:5px;
+            }
+        }    }
     
+    .balanceCash{
+        display:flex;
+        margin-top: 20px;
+        
+        .balanceSheet{
+            margin-right:5px;
+        }
+
+        .cashFlow{
+            margin-left:5px;
+        }        
+            
+        .header{
+            p{
+                strong{
+                    font-family:@baseFontFamily;
+                }
+            }
+        }
+    }
 }
