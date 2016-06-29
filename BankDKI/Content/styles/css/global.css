@@ -1126,6 +1126,40 @@ nav ul li a:hover {
   background: #da2126;
   color: #ffffff;
 }
+.bordered {
+  border: 1px solid #b7b7b7;
+}
+.table {
+  display: table;
+  margin-bottom: 0;
+}
+.table > div {
+  display: table-row;
+}
+.table > div > div {
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  display: table-cell;
+  padding: 4px;
+}
+.table > div:first-child div {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  background: #898989;
+  border-left: 1px solid #ffffff;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 32px;
+}
+.table > div:first-child div:first-child {
+  border-left: none;
+}
+.table.center {
+  text-align: center;
+}
+.table.alternate > div:nth-child(odd) {
+  background: #ededed;
+}
 body {
   font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
   font-size: 19px;

@@ -93,3 +93,53 @@ nav {
         }
     }
 }
+
+.bordered{
+    border:@contentBorder;
+}
+
+.table{
+    display:table;
+    margin-bottom:0;
+
+    > div{
+        display:table-row;
+
+        > div{
+            font-family: @bookFontFamily;
+            font-size:14px;
+            line-height:25px;
+            display:table-cell;
+            padding:4px;
+
+        }
+
+        &:first-child{
+            div{
+                font-family: @baseFontFamily;
+                background: @contentHeaderBg;
+                border-left:1px solid @white;
+                font-size:16px;
+                color:@white;
+                line-height:32px;
+
+                &:first-child{
+                    border-left:none;
+                }
+            }
+        }
+    }
+
+    &.center{
+        text-align:center;
+    }
+
+    &.alternate{
+        > div{
+            &:nth-child(odd){
+                background:@tableAlternateBg;
+            }
+
+        }
+    }
+}
