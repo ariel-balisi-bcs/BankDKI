@@ -3,17 +3,71 @@
 #creditAnalysis{
 
     .applied-loan-amount-container{
-        margin:20px;
-        border-bottom-width:1px;
-    }
-
-    .credit-rating-container{
-        height:170px;
-        .credit-rating{
-            height:150px;
+        height:80px;
+        .applied-loan{
+            font-size:14px;
+            color:@tableTextColor;
+        }
+        .applied-label.col-md-6 > span {
+            float: right;
+            text-align: right;
+            width: 100%;
+        }
+        .applied-amount.col-md-6 > span {
+            float: left;
+            text-align: left;
+            width: 100%;
         }
     }    
 
+    .credit-rating-container{
+        height:250px;
+        margin-top:12px;
+        .credit-rating{
+            height:220px;
+            padding:0;
+            .credit-btn-container{
+                margin-top:12px;
+                display:block;
+            }
+            .credit-rating-label{
+                font-size:14px;
+                color:@tableTextColor;
+                text-align:center;
+            }
+            .credit-rating-score{
+                font-size:36px;
+                text-align:center;
+            }
+            .credit-rating-date{
+                font-size:14px;
+                text-align:center;
+            }
+            .btn.btn-blue{
+                width:430px;
+                margin-bottom:12px;
+                margin-right:auto;
+                margin-left:auto;
+                display:block;
+            }
+            .table{
+                
+                > div > div:first-child{
+                     width:230px;
+                }
+                
+            }   
+                      
+        }        
+    }    
+
+    .credit-rating.bordered {
+        padding:0;
+        .table.center div {
+            line-height: 32px;
+        }
+    }
+               
     .payment-details{
         margin-top:12px;
     }

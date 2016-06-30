@@ -1,12 +1,60 @@
 ﻿#creditAnalysis .applied-loan-amount-container {
-  margin: 20px;
-  border-bottom-width: 1px;
+  height: 80px;
+}
+#creditAnalysis .applied-loan-amount-container .applied-loan {
+  font-size: 14px;
+  color: #6d6d6d;
+}
+#creditAnalysis .applied-loan-amount-container .applied-label.col-md-6 > span {
+  float: right;
+  text-align: right;
+  width: 100%;
+}
+#creditAnalysis .applied-loan-amount-container .applied-amount.col-md-6 > span {
+  float: left;
+  text-align: left;
+  width: 100%;
 }
 #creditAnalysis .credit-rating-container {
-  height: 170px;
+  height: 250px;
+  margin-top: 12px;
 }
 #creditAnalysis .credit-rating-container .credit-rating {
-  height: 150px;
+  height: 220px;
+  padding: 0;
+}
+#creditAnalysis .credit-rating-container .credit-rating .credit-btn-container {
+  margin-top: 12px;
+  display: block;
+}
+#creditAnalysis .credit-rating-container .credit-rating .credit-rating-label {
+  font-size: 14px;
+  color: #6d6d6d;
+  text-align: center;
+}
+#creditAnalysis .credit-rating-container .credit-rating .credit-rating-score {
+  font-size: 36px;
+  text-align: center;
+}
+#creditAnalysis .credit-rating-container .credit-rating .credit-rating-date {
+  font-size: 14px;
+  text-align: center;
+}
+#creditAnalysis .credit-rating-container .credit-rating .btn.btn-blue {
+  width: 430px;
+  margin-bottom: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+#creditAnalysis .credit-rating-container .credit-rating .table > div > div:first-child {
+  width: 230px;
+}
+#creditAnalysis .credit-rating.bordered {
+  padding: 0;
+}
+#creditAnalysis .credit-rating.bordered .table.center div {
+  line-height: 32px;
 }
 #creditAnalysis .payment-details {
   margin-top: 12px;

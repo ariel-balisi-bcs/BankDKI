@@ -1,10 +1,10 @@
 ﻿     <div class="applied-loan-amount-container bordered contentPadding">
-        <div>
-            <span>Applied Loan Amount:</span>
-            <span>$999,999.00</span>
-        </div>
-        <div>
+        <div class="applied-label col-md-6">
+            <span class="applied-loan">Applied Loan Amount:</span>
             <span>Approved Loan Amount:</span>
+        </div>
+        <div class="applied-amount col-md-6">
+            <span class="applied-loan">$999,999.00</span>
             <span>$99,999.00</span>
         </div>
     </div>
@@ -38,17 +38,19 @@
         </div>
     </div>
     <div class="credit-rating-container bordered contentPadding">
-        <div class="credit-rating col-md-4 bordered">
-            <div><span>VIEW CREDIT ANALYSIS REPORT</span></div>
-            <div>Your Credit Rating Score</div>
-            <div>AA</div>
-            <div>On May 10, 2016</div>
-            <button>APPROVE</button>
-            <button>DENY</button>
+        <div class="credit-rating col-md-5">
+            <button class="btn btn-blue" tooltip="Click to View Credit Analysis Report">VIEW CREDIT ANALYSIS REPORT</button>
+            <div class="credit-rating-label">Your Credit Rating Score</div>
+            <div class="credit-rating-score">AA</div>
+            <div class="credit-rating-date">On May 10, 2016</div>
+            <div class="credit-btn-container text-center">
+                <button class="btn btn-green">APPROVE</button>
+                <button class="btn btn-red">DENY</button>
+            </div>
         </div>
-        <div class="credit-rating col-md-8 bordered">
+        <div class="credit-rating col-md-7 bordered">
             <div class="table center">
-                <div>
+                <div class="head">
                     <div>SCORE INGREDIENTS</div>
                     <div>HOW YOU RATE</div>
                 </div>
