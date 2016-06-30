@@ -168,3 +168,37 @@ nav {
         }
     }
 }
+
+.rating{
+    background:@ratingBg;
+    height:14px;
+    border-radius:7px;
+
+    &.rating-red span{
+        background:@red;
+    }
+
+    &.rating-green span{
+        background:@green;
+    }
+
+    &.rating-blue span{
+        background:@blue;
+    }
+
+    &.rating-yellow span{
+        background:@yellow;
+    }
+
+    span{
+        font-family:@mediumFontFamily;
+        font-size:7px;
+        text-transform:uppercase;
+        line-height:14px;
+        padding:0 10px;
+        color:@white;
+        border-radius:7px;
+        display:block;
+    }
+
+}

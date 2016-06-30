@@ -1274,3 +1274,30 @@ nav ul li a:focus {
 .table.alternate > div:nth-child(odd) {
   background: #ededed;
 }
+.rating {
+  background: #e0e0e0;
+  height: 14px;
+  border-radius: 7px;
+}
+.rating.rating-red span {
+  background: #da2126;
+}
+.rating.rating-green span {
+  background: #2baf73;
+}
+.rating.rating-blue span {
+  background: #1ba6dd;
+}
+.rating.rating-yellow span {
+  background: #eaa10f;
+}
+.rating span {
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 7px;
+  text-transform: uppercase;
+  line-height: 14px;
+  padding: 0 10px;
+  color: #ffffff;
+  border-radius: 7px;
+  display: block;
+}
