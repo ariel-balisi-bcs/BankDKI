@@ -1,5 +1,48 @@
 ﻿@import 'variable.less';
 
 #accountingInfo{
-     
+     .main-context-box {
+		border: @contentBorder;
+		margin-bottom: 30px;
+		padding: 20px;
+
+		#comparison-table {
+            border-collapse: collapse;
+			display: table;
+			font-family: @bookFontFamily;
+			font-size: 14px;
+			text-align: center;
+
+            .head {
+                div {
+                    border: 1px solid #ffffff;
+                    color: @white;
+                    font-size: 12px;
+                    line-height: 18px;
+
+                    span {
+                        display: block;
+                        font-size: 16px;
+                    }
+
+                    &:first-child {
+                        background: #ffffff;
+                        border: none;
+                    }
+                }
+            }
+
+            div {
+                div {
+                    border: 1px solid #000000;
+                    color: @tableTextColor;
+
+                    &:first-child {
+                        text-align: left;
+                        border: none;
+                    }
+                }
+            }
+		}
+	}
 }

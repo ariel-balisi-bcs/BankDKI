@@ -1,1 +1,34 @@
-﻿
+﻿#accountingInfo .main-context-box {
+  border: 1px solid #b7b7b7;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+#accountingInfo .main-context-box #comparison-table {
+  border-collapse: collapse;
+  display: table;
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+#accountingInfo .main-context-box #comparison-table .head div {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 18px;
+}
+#accountingInfo .main-context-box #comparison-table .head div span {
+  display: block;
+  font-size: 16px;
+}
+#accountingInfo .main-context-box #comparison-table .head div:first-child {
+  background: #ffffff;
+  border: none;
+}
+#accountingInfo .main-context-box #comparison-table div div {
+  border: 1px solid #000000;
+  color: #6d6d6d;
+}
+#accountingInfo .main-context-box #comparison-table div div:first-child {
+  text-align: left;
+  border: none;
+}
