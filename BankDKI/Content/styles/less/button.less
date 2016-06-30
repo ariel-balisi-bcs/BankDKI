@@ -1,11 +1,62 @@
 ﻿@import 'variable.less';
 
 .btn{
-    width:200px;
-    height:30px;
+    min-width:222px;
+    line-height:50px;
     color:@white;
-}
-.btn-red{
-    background:@red;
+    border-radius:2px;
+    padding:0 5px;
+    font-size:22px;
+    text-transform:uppercase;
+
+    &:hover,
+    &:focus{
+        color:@white;
+        text-decoration:none;
+        outline:none;
+    }
+
+    &:focus{
+        box-shadow:0 0 2px 3px blue;
+        -moz-transition: box-shadow .2s ease-in-out;
+        -o-transition: box-shadow .2s ease-in-out;
+        -webkit-transition: box-shadow .2s ease-in-out;
+        transition: box-shadow .2s ease-in-out;
+    }
+
+    &.btn-red{
+        background:@red;
+
+        &:hover{
+            background:@redHover;
+        }
     
+    }
+
+    &.btn-green{
+        background:@green;
+
+        &:hover{
+            background:@greenHover;
+        }
+    }
+
+    &.btn-blue{
+        background:@blue;
+    
+        &:hover{
+            background:@blueHover;
+        }
+    }
+
+    &.btn-white{
+        background:@white;
+        color:@darkGray;
+        text-transform:capitalize;
+        border:1px solid @borderColor;
+    
+        &:hover{
+            background:@whiteHover;
+        }
+    }
 }

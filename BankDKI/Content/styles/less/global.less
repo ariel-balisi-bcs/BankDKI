@@ -44,7 +44,19 @@ strong{
 a {
     color: @red;
 
-    &:hover{
-        text-decoration:none;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:focus {
+        box-shadow: 0 0 2px 3px blue;
+        position: relative;
+        z-index: 9;
+        -moz-transition: box-shadow .2s ease-in-out;
+        -o-transition: box-shadow .2s ease-in-out;
+        -webkit-transition: box-shadow .2s ease-in-out;
+        transition: box-shadow .2s ease-in-out;
     }
 }

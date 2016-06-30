@@ -88,6 +88,9 @@ nav ul li a:hover {
   background: #da2126;
   color: #ffffff;
 }
+nav ul li a:focus {
+  color: #ffffff;
+}
 .bordered {
   border: 1px solid #b7b7b7;
 }

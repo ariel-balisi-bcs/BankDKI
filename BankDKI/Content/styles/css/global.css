@@ -38,6 +38,17 @@ strong {
 a {
   color: #da2126;
 }
-a:hover {
+a:hover,
+a:focus {
   text-decoration: none;
+  outline: none;
+}
+a:focus {
+  box-shadow: 0 0 2px 3px blue;
+  position: relative;
+  z-index: 9;
+  -moz-transition: box-shadow 0.2s ease-in-out;
+  -o-transition: box-shadow 0.2s ease-in-out;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
 }

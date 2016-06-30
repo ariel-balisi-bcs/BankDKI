@@ -30,3 +30,42 @@ F:\Bank DKI Source Project\BankDKI\BankDKI\bin\System.Web.WebPages.Deployment.xm
 F:\Bank DKI Source Project\BankDKI\BankDKI\bin\System.Web.WebPages.Razor.xml
 F:\Bank DKI Source Project\BankDKI\BankDKI\obj\Debug\BankDKI.dll
 F:\Bank DKI Source Project\BankDKI\BankDKI\obj\Debug\BankDKI.pdb
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\BankDKI.dll.config
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\BankDKI.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\BankDKI.pdb
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\Antlr3.Runtime.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\dotless.Core.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\EntityFramework.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\Newtonsoft.Json.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Net.Http.Formatting.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Http.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Http.WebHost.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Mvc.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Optimization.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Optimization.Less.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Providers.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Razor.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.WebPages.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.WebPages.Razor.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\WebGrease.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\Antlr3.Runtime.pdb
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\dotless.Core.pdb
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\Newtonsoft.Json.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Net.Http.Formatting.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Http.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Http.WebHost.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Optimization.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Optimization.Less.pdb
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Optimization.Less.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\EntityFramework.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Mvc.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.Razor.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.WebPages.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\bin\System.Web.WebPages.Razor.xml
+E:\Projects\Bank_DKI\BankDKI\BankDKI\obj\Debug\BankDKI.dll
+E:\Projects\Bank_DKI\BankDKI\BankDKI\obj\Debug\BankDKI.pdb
+E:\Projects\Bank_DKI\BankDKI\BankDKI\obj\Debug\BankDKI.Internal.Credit.Rating.csprojResolveAssemblyReference.cache
