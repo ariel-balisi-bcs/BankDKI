@@ -1,1 +1,13 @@
-﻿
+﻿#creditAnalysis .applied-loan-amount-container {
+  margin: 20px;
+  border-bottom-width: 1px;
+}
+#creditAnalysis .credit-rating-container {
+  height: 170px;
+}
+#creditAnalysis .credit-rating-container .credit-rating {
+  height: 150px;
+}
+#creditAnalysis .payment-details {
+  margin-top: 12px;
+}

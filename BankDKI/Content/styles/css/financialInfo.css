@@ -19,14 +19,45 @@
 }
 #financialInfo .balanceCash {
   display: flex;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 #financialInfo .balanceCash .balanceSheet {
   margin-right: 5px;
 }
+#financialInfo .balanceCash .balanceSheet .table > div > div:nth-child(2),
+#financialInfo .balanceCash .balanceSheet .table > div > div:nth-child(3) {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  text-align: right;
+}
 #financialInfo .balanceCash .cashFlow {
   margin-left: 5px;
 }
+#financialInfo .balanceCash .cashFlow .table > div > div:nth-child(2) {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  text-align: right;
+}
 #financialInfo .balanceCash .header p strong {
   font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+}
+#financialInfo .balanceCash .table > div > div:first-child:not(.lineHead):not(.total):not(.subHead) {
+  padding-left: 30px;
+}
+#financialInfo .balanceCash .table > div > div.lineHead {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  color: #545454;
+  font-size: 24px;
+  padding: 15px 0;
+}
+#financialInfo .balanceCash .table > div > div.total {
+  padding-left: 15px;
+}
+#financialInfo .balanceCash .table > div > div.subHead {
+  padding-left: 15px;
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+}
+#financialInfo .finnancialPastPerformance {
+  margin-bottom: 20px;
+}
+#financialInfo .finnancialPastPerformance img {
+  width: 100%;
 }

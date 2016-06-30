@@ -25,18 +25,42 @@
             &.loan{
                 margin-left:5px;
             }
-        }    }
+        }
+    }
     
     .balanceCash{
         display:flex;
-        margin-top: 20px;
+        margin: 20px 0;
         
         .balanceSheet{
             margin-right:5px;
+
+            .table{
+                > div{
+                    > div {
+                        &:nth-child(2),
+                        &:nth-child(3){
+                            font-family:@baseFontFamily;
+                            text-align:right;
+                        }
+                    }
+                }
+            }
         }
 
         .cashFlow{
             margin-left:5px;
+
+            .table{
+                > div{
+                    > div {
+                        &:nth-child(2){
+                            font-family:@baseFontFamily;
+                            text-align:right;
+                        }
+                    }
+                }
+            }
         }        
             
         .header{
@@ -45,6 +69,41 @@
                     font-family:@baseFontFamily;
                 }
             }
+        }
+
+        .table{
+            > div{
+                > div{
+                    &:first-child:not(.lineHead):not(.total):not(.subHead){
+                        padding-left:30px;
+                    }
+
+                    &.lineHead{
+                        font-family:@baseFontFamily;
+                        color:@headerColor;
+                        font-size:24px;
+                        padding:15px 0;
+                    }
+
+                    &.total{
+                        padding-left:15px;
+                    }
+
+                    &.subHead{
+                        padding-left:15px;
+                        font-family:@mediumFontFamily;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .finnancialPastPerformance{
+        margin-bottom:20px;
+
+        img{
+            width:100%;
         }
     }
 }

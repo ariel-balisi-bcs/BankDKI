@@ -27,7 +27,7 @@
   color: #ffffff;
 }
 .red {
-  color: #da2126;
+  color: #da2126 !important;
 }
 .white {
   color: #ffffff;
@@ -107,6 +107,7 @@ nav ul li a:hover {
   line-height: 17px;
   display: table-cell;
   padding: 4px;
+  color: #6d6d6d;
 }
 .table > div.head div {
   font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;

@@ -32,6 +32,9 @@ p {
   font-size: 15px;
   margin: 0;
 }
+strong {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+}
 a {
   color: #da2126;
 }
