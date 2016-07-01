@@ -1,1 +1,101 @@
-﻿
+﻿#sensitivity .main-context-box {
+  border: 1px solid #b7b7b7;
+  margin-bottom: 30px;
+  padding: 40px 20px;
+}
+#sensitivity .main-context-box > div {
+  display: inline-block;
+  vertical-align: top;
+}
+#sensitivity .main-context-box #search-sidebar {
+  background: #e0e0e0;
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 16px;
+  padding: 20px 10px 50px;
+  width: 20%;
+}
+#sensitivity .main-context-box #search-sidebar h5 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#sensitivity .main-context-box #search-sidebar div {
+  display: inline-block;
+  width: 100%;
+}
+#sensitivity .main-context-box #search-sidebar div label {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 10px;
+}
+#sensitivity .main-context-box #search-sidebar div select {
+  width: 100%;
+}
+#sensitivity .main-context-box #analysis-table {
+  width: 79%;
+}
+#sensitivity .main-context-box #analysis-table #topbar {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+}
+#sensitivity .main-context-box #analysis-table #topbar div:first-child {
+  float: left;
+}
+#sensitivity .main-context-box #analysis-table #topbar div:first-child .btn {
+  background: transparent;
+  border: 2px solid #4f4f4f;
+  color: #6d6d6d;
+  font-size: 14px;
+  line-height: 30px;
+  min-width: 175px;
+}
+#sensitivity .main-context-box #analysis-table #topbar div:last-child {
+  background: #4f4f4f;
+  color: #ffffff;
+  float: right;
+  font-size: 12px;
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+#sensitivity .main-context-box #analysis-table #topbar div:last-child label {
+  border-right: 1px solid #ffffff;
+  font-size: 16px;
+  margin-bottom: 0;
+  padding-right: 10px;
+  text-transform: capitalize;
+}
+#sensitivity .main-context-box #analysis-table #topbar div:last-child input[type="radio"] {
+  margin-left: 5px;
+}
+#sensitivity .main-context-box #analysis-table .table {
+  text-align: center;
+}
+#sensitivity .main-context-box #analysis-table .table div > div {
+  padding: 20px 0;
+}
+#sensitivity .main-context-box #analysis-table .table div > div:first-child {
+  background: #ffffff;
+  font-weight: bold;
+  padding-left: 10px;
+  text-align: left;
+}
+#sensitivity .main-context-box #analysis-table .table div:first-child > div {
+  background: #ededed;
+  font-weight: bold;
+  padding: 15px 0;
+}
+#sensitivity .main-context-box #analysis-table .table-header {
+  background: #da2126;
+  color: #ffffff;
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+}
+#sensitivity .main-context-box #analysis-table .table-footer {
+  background: #545454;
+  color: #ffffff;
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+}

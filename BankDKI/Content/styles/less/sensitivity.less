@@ -1,5 +1,125 @@
 ﻿@import 'variable.less';
 
 #sensitivity{
+    .main-context-box {
+		border: @contentBorder;
+		margin-bottom: 30px;
+		padding: 40px 20px;
 
+        & > div {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #search-sidebar {
+            background: @ratingBg;
+            font-family: @bookFontFamily;
+            font-size: 16px;
+            padding: 20px 10px 50px;
+            width: 20%;
+
+            h5 {
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            div {
+                display: inline-block;
+                width: 100%;
+
+                label {
+                    margin-top: 16px;
+                    font-size: 14px;
+                    line-height: 10px;
+                }
+
+                select {
+                    width: 100%;
+                }
+            }
+        }
+
+        #analysis-table {
+            width: 79%;
+
+            #topbar {
+                display: inline-block;
+                margin-top: 20px;
+                width: 100%;
+
+                div:first-child {
+                    float: left;
+
+                    .btn {
+                        background: transparent;
+                        border: 2px solid @borderColor;
+                        color: @tableTextColor;
+                        font-size: 14px;
+                        line-height: 30px;
+                        min-width: 175px;
+                    }
+                }
+
+                div:last-child {
+                    background: @darkGray;
+                    color: @white;
+                    float: right;
+                    font-size: 12px;
+                    font-family: @bookFontFamily;
+                    padding: 5px 10px;
+                    text-transform: uppercase;
+
+                    label {
+                        border-right: 1px solid @white;
+                        font-size: 16px;
+                        margin-bottom: 0;
+                        padding-right: 10px;
+                        text-transform: capitalize;
+                    }
+
+                    input[type="radio"] {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .table {
+                text-align: center;
+
+                div {
+                    & > div {
+                        padding: 20px 0;
+
+                        &:first-child {
+                            background: @white;
+                            font-weight: bold;
+                            padding-left: 10px;
+                            text-align: left;
+                        }
+                    }
+                    &:first-child > div {
+                        background: @tableAlternateBg;
+                        font-weight: bold;
+                        padding: 15px 0;
+                    }
+                }
+            }
+
+            .table-header {
+                background: @red;
+                color: @white;
+                padding: 10px 0px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .table-footer {
+                background: @headerColor;
+                color: @white;
+                padding: 10px 0px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
 }

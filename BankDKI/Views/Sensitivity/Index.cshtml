@@ -13,7 +13,303 @@
     <div class="content-wrapper">
         @Html.Partial("_Menus")
 
-        <h1>Sensitivity Analysis</h1>
-        <div>This is a test only page. Check if less is working.</div>
+        <div class="main-context-box">
+            <div id="search-sidebar">
+                <h5>Select your variable ratios and date</h5>
+
+                <div>
+                    <label for="dd-variable">Variable</label>
+                </div>
+                <div>
+                    <select name="dd-variable">
+                        <option value="" selected>Price</option>
+                        <option value="">Volume</option>
+                        <option value="">COGS / Sales</option>
+                        <option value="">SGA / Sales</option>
+                        <option value="">Tax Rate</option>
+                        <option value="">Int Rate</option>
+                        <option value="">AR DOH</option>
+                        <option value="">INV DOH</option>
+                        <option value="">AP DOH</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dd-ratio1">Ratio 1</label>
+                </div>
+                <div>
+                    <select name="dd-ratio1">
+                        <option value="" selected>ROE</option>
+                        <option value="">ROS</option>
+                        <option value="">ATO</option>
+                        <option value="">ALEV</option>
+                        <option value="">Gross Profit</option>
+                        <option value="">Gross Profit Margin</option>
+                        <option value="">Net Oper Profit</option>
+                        <option value="">Net Oper Profit Margin</option>
+                        <option value="">Pre-Tax Profit</option>
+                        <option value="">Pre-Tax Profit Margin</option>
+                        <option value="">Net Profit</option>
+                        <option value="">Net Profit Margin</option>
+                        <option value="">Net Working Capital</option>
+                        <option value="">Chq in Working Capital</option>
+                        <option value="">Working Capital / Sales</option>
+                        <option value="">Working Investment</option>
+                        <option value="">Chq in Working Inv</option>
+                        <option value="">Working Inv / Sales</option>
+                        <option value="">Current Ratio</option>
+                        <option value="">Quick Ratio</option>
+                        <option value="">Debt to Equity ratio</option>
+                        <option value="">Leverage</option>
+                        <option value="">EBITDA</option>
+                        <option value="">EBITDA / Int Exp</option>
+                        <option value="">EBITDA / Fin Pmt</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dd-ratio2">Ratio 2</label>
+                </div>
+                <div>
+                    <select name="dd-ratio2">
+                        <option value="">ROE</option>
+                        <option value="">ROS</option>
+                        <option value="">ATO</option>
+                        <option value="">ALEV</option>
+                        <option value="">Gross Profit</option>
+                        <option value="">Gross Profit Margin</option>
+                        <option value="">Net Oper Profit</option>
+                        <option value="">Net Oper Profit Margin</option>
+                        <option value="">Pre-Tax Profit</option>
+                        <option value="">Pre-Tax Profit Margin</option>
+                        <option value="" selected>Net Profit</option>
+                        <option value="">Net Profit Margin</option>
+                        <option value="">Net Working Capital</option>
+                        <option value="">Chq in Working Capital</option>
+                        <option value="">Working Capital / Sales</option>
+                        <option value="">Working Investment</option>
+                        <option value="">Chq in Working Inv</option>
+                        <option value="">Working Inv / Sales</option>
+                        <option value="">Current Ratio</option>
+                        <option value="">Quick Ratio</option>
+                        <option value="">Debt to Equity ratio</option>
+                        <option value="">Leverage</option>
+                        <option value="">EBITDA</option>
+                        <option value="">EBITDA / Int Exp</option>
+                        <option value="">EBITDA / Fin Pmt</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dd-ratio3">Ratio 3</label>
+                </div>
+                <div>
+                    <select name="dd-ratio3">
+                        <option value="">ROE</option>
+                        <option value="">ROS</option>
+                        <option value="">ATO</option>
+                        <option value="">ALEV</option>
+                        <option value="">Gross Profit</option>
+                        <option value="">Gross Profit Margin</option>
+                        <option value="">Net Oper Profit</option>
+                        <option value="">Net Oper Profit Margin</option>
+                        <option value="">Pre-Tax Profit</option>
+                        <option value="">Pre-Tax Profit Margin</option>
+                        <option value="">Net Profit</option>
+                        <option value="" selected>Net Profit Margin</option>
+                        <option value="">Net Working Capital</option>
+                        <option value="">Chq in Working Capital</option>
+                        <option value="">Working Capital / Sales</option>
+                        <option value="">Working Investment</option>
+                        <option value="">Chq in Working Inv</option>
+                        <option value="">Working Inv / Sales</option>
+                        <option value="">Current Ratio</option>
+                        <option value="">Quick Ratio</option>
+                        <option value="">Debt to Equity ratio</option>
+                        <option value="">Leverage</option>
+                        <option value="">EBITDA</option>
+                        <option value="">EBITDA / Int Exp</option>
+                        <option value="">EBITDA / Fin Pmt</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dd-ratio4">Ratio 4</label>
+                </div>
+                <div>
+                    <select name="dd-ratio4">
+                        <option value="">ROE</option>
+                        <option value="">ROS</option>
+                        <option value="">ATO</option>
+                        <option value="">ALEV</option>
+                        <option value="">Gross Profit</option>
+                        <option value="">Gross Profit Margin</option>
+                        <option value="">Net Oper Profit</option>
+                        <option value="">Net Oper Profit Margin</option>
+                        <option value="">Pre-Tax Profit</option>
+                        <option value="">Pre-Tax Profit Margin</option>
+                        <option value="">Net Profit</option>
+                        <option value="">Net Profit Margin</option>
+                        <option value="">Net Working Capital</option>
+                        <option value="">Chq in Working Capital</option>
+                        <option value="">Working Capital / Sales</option>
+                        <option value="">Working Investment</option>
+                        <option value="">Chq in Working Inv</option>
+                        <option value="">Working Inv / Sales</option>
+                        <option value="">Current Ratio</option>
+                        <option value="">Quick Ratio</option>
+                        <option value="">Debt to Equity ratio</option>
+                        <option value="">Leverage</option>
+                        <option value="" selected>EBITDA</option>
+                        <option value="">EBITDA / Int Exp</option>
+                        <option value="">EBITDA / Fin Pmt</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dd-ratio5">Ratio 5</label>
+                </div>
+                <div>
+                    <select name="dd-ratio5">
+                        <option value="">ROE</option>
+                        <option value="">ROS</option>
+                        <option value="">ATO</option>
+                        <option value="">ALEV</option>
+                        <option value="">Gross Profit</option>
+                        <option value="">Gross Profit Margin</option>
+                        <option value="">Net Oper Profit</option>
+                        <option value="">Net Oper Profit Margin</option>
+                        <option value="">Pre-Tax Profit</option>
+                        <option value="">Pre-Tax Profit Margin</option>
+                        <option value="">Net Profit</option>
+                        <option value="">Net Profit Margin</option>
+                        <option value="">Net Working Capital</option>
+                        <option value="">Chq in Working Capital</option>
+                        <option value="">Working Capital / Sales</option>
+                        <option value="">Working Investment</option>
+                        <option value="">Chq in Working Inv</option>
+                        <option value="">Working Inv / Sales</option>
+                        <option value="">Current Ratio</option>
+                        <option value="">Quick Ratio</option>
+                        <option value="">Debt to Equity ratio</option>
+                        <option value="">Leverage</option>
+                        <option value="">EBITDA</option>
+                        <option value="">EBITDA / Int Exp</option>
+                        <option value="10" selected>EBITDA / Fin Pmt</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dd-date">Date</label>
+                </div>
+                <div>
+                    <select name="dd-date">
+                        <option value="">2018</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="analysis-table">
+                <h1>Sensitive Analysis <span class="red">1A Model</span></h1>
+
+                <div id="topbar">
+                    <div>
+                        <button id="zoomtofit" class="btn">Zoom to fit screen</button>
+                        <button id="cleartable" class="btn">Clear data table</button>
+                    </div>
+                    <div>
+                        <label for="case-scenarios">Scenarios</label>
+                        <input type="radio" name="case-scenarios" />Base case
+                        <input type="radio" name="case-scenarios" />Best case
+                        <input type="radio" name="case-scenarios" />Worst case
+                    </div>
+                </div>
+
+                <div class="table-header">Price</div>
+
+                <div class="table alternate">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div>800</div>
+                        <div>850</div>
+                        <div>900</div>
+                        <div>950</div>
+                        <div>1,000</div>
+                        <div>1,050</div>
+                        <div>1,100</div>
+                        <div>1,150</div>
+                        <div>1,200</div>
+                    </div>
+                    <div>
+                        <div>ROE</div>
+                        <div>21.64%</div>
+                        <div>17.29%</div>
+                        <div>18.37%</div>
+                        <div>19.43%</div>
+                        <div>20.46%</div>
+                        <div>21.46%</div>
+                        <div>22.44%</div>
+                        <div>23.40%</div>
+                        <div>24.33%</div>
+                        <div>25.24%</div>
+                    </div>
+                    <div>
+                        <div>Net Profit</div>
+                        <div>104,509</div>
+                        <div>79,909</div>
+                        <div>86,059</div>
+                        <div>92,209</div>
+                        <div>98,359</div>
+                        <div>104,509</div>
+                        <div>110,659</div>
+                        <div>116,809</div>
+                        <div>122,959</div>
+                        <div>129,109</div>
+                    </div>
+                    <div>
+                        <div>Net Profit Margin</div>
+                        <div>20.90%</div>
+                        <div>19.98%</div>
+                        <div>20.25%</div>
+                        <div>20.49%</div>
+                        <div>20.71%</div>
+                        <div>20.90%</div>
+                        <div>21.08%</div>
+                        <div>21.24%</div>
+                        <div>21.38%</div>
+                        <div>21.52%</div>
+                    </div>
+                    <div>
+                        <div>EBITDA</div>
+                        <div>104,900</div>
+                        <div>74,900</div>
+                        <div>82,400</div>
+                        <div>89,900</div>
+                        <div>97,400</div>
+                        <div>104,900</div>
+                        <div>112,400</div>
+                        <div>119,900</div>
+                        <div>127,400</div>
+                        <div>134,900</div>
+                    </div>
+                    <div>
+                        <div>EBITDA/Fin Pmt</div>
+                        <div>3.81</div>
+                        <div>2.72</div>
+                        <div>2.99</div>
+                        <div>3.26</div>
+                        <div>3.54</div>
+                        <div>3.81</div>
+                        <div>4.08</div>
+                        <div>4.35</div>
+                        <div>4.62</div>
+                        <div>4.9</div>
+                    </div>
+                </div>
+                <div class="table-footer">2018</div>
+            </div>
+        </div>
     </div>
+
 }
