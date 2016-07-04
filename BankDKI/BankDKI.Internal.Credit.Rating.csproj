@@ -177,6 +177,7 @@
     <Content Include="Content\images\graph_finnancialPastPerformance.jpg" />
     <Content Include="Content\images\graph_Future_Payment.jpg" />
     <Content Include="Content\images\graph_Future_Payment_2.jpg" />
+    <Content Include="Content\images\graph_IndustryComparison.jpg" />
     <Content Include="Content\images\logoTheCompany.jpg" />
     <Content Include="Content\images\mainLogo.jpg" />
     <Content Include="Content\scripts\lib\bootstrap.min.js" />
