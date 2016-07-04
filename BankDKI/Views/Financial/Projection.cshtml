@@ -13,12 +13,242 @@
     <div class="content-wrapper">
         @Html.Partial("_Menus")
 
-        <h1>Financial Projection</h1>
-        <div>This is a test only page. Check if less is working.</div>
+        <!-- Banner-->
+        <div class="banner bordered">
+            <div class="col col-md-2 contentPadding">
+                <img src="~/Content/images/logoTheCompany.jpg" alt="The Company Logo" />
+            </div>
+            <div class="col col-md-5 contentPadding">
+                <h2>$ 999,999,999.00</h2>
+                <p>Projected Approved Loan Amount</p>
+            </div>
+            <div class="col col-md-5 contentPadding">
+                <h2>Other Amount</h2>
+                <p>Other Amount</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- END: Banner-->
 
-        <input type="button" class="btn btn-red" value="Button" />
-        <input type="button" class="btn btn-green" value="Button" />
-        <input type="button" class="btn btn-blue" value="Button" />
-        <input type="button" class="btn btn-white" value="Button" />
+        <div class="bordered contentPadding">
+            <!-- Income Stamtent-->
+            <div class="incomeStatement pull-left">
+                <h3>Income Stamtent</h3>
+                <p>MMASS Sample Customer (MMASS Sample)</p>
+                <p>Detailed Income Statement - %</p>
+                <p>Industry Classification: NAICS Code:315228</p>
+
+                <div class="incomeStatementTable">
+                    <div class="table">
+                        <div>
+                            <div>Statement Date</div>
+                            <div>6/30/2001</div>
+                            <div>6/30/2002</div>
+                            <div>6/30/2003</div>
+                            <div>6/30/2004</div>
+                            <div>6/30/2005</div>
+                        </div>
+                        <div>
+                            <div>Months Covered</div>
+                            <div>12</div>
+                            <div>12</div>
+                            <div>12</div>
+                            <div>12</div>
+                            <div>12</div>
+                        </div>
+                        <div>
+                            <div>Audit Mthd</div>
+                            <div>Unqualif'd</div>
+                            <div>Unqualif'd</div>
+                            <div>Unqualif'd</div>
+                            <div>Unqualif'd</div>
+                            <div>Unqualif'd</div>
+                        </div>
+                        <div>
+                            <div>Accountant</div>
+                            <div>KMPG</div>
+                            <div>KMPG</div>
+                            <div>KMPG</div>
+                            <div>KMPG</div>
+                            <div>KMPG</div>
+                        </div>
+                        <div>
+                            <div>Analyst</div>
+                            <div>GJH</div>
+                            <div>GJH</div>
+                            <div>GJH</div>
+                            <div>GJH</div>
+                            <div>GJH</div>
+                        </div>
+                        <div>
+                            <div>Stmt Type</div>
+                            <div>Annual</div>
+                            <div>Annual</div>
+                            <div>Annual</div>
+                            <div>Annual</div>
+                            <div>Annual</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sourceCurrencyTable">
+                    <p>Source Currency: USD United States Dollars</p>
+                    <div class="table">
+                        <div>
+                            <div>Net Sales - Manufacturing Division</div>
+                            <div>98.7</div>
+                            <div>95.5</div>
+                            <div>90.0</div>
+                            <div>80.7</div>
+                            <div>75.0</div>
+                        </div>
+                        <div>
+                            <div>Net Sales - Manufacturing Catalog Division</div>
+                            <div>1.3</div>
+                            <div>4.5</div>
+                            <div>10.0</div>
+                            <div>19.3</div>
+                            <div>25.0</div>
+                        </div>
+                        <div>
+                            <div>NET SALES/REVENUE</div>
+                            <div>100.0</div>
+                            <div>100.0</div>
+                            <div>100.0</div>
+                            <div>100.0</div>
+                            <div>100.0</div>
+                        </div>
+                    </div>
+
+                    <div class="table">
+                        <div>
+                            <div>Cost of Goods Sold</div>
+                            <div>73.8</div>
+                            <div>75.0</div>
+                            <div>73.5</div>
+                            <div>72.2</div>
+                            <div>76.2</div>
+                        </div>
+                        <div>
+                            <div>Cost of Goods Sold - Depreciation</div>
+                            <div>1.6</div>
+                            <div>2.1</div>
+                            <div>2.3</div>
+                            <div>1.9</div>
+                            <div>2.2</div>
+                        </div>
+                        <div class="topBorder">
+                            <div>TOTAL COST OF SALES/REV</div>
+                            <div>75.3</div>
+                            <div>77.1</div>
+                            <div>75.7</div>
+                            <div>74.1</div>
+                            <div>78.4</div>
+                        </div>
+                        <div class="topBorder">
+                            <div>GROSS PROFIT</div>
+                            <div>24.7</div>
+                            <div>22.9</div>
+                            <div>24.3</div>
+                            <div>25.9</div>
+                            <div>21.6</div>
+                        </div>
+                    </div>
+
+                    <div class="table">
+                        <div>
+                            <div>SG &amp; A Expence</div>
+                            <div>18.6</div>
+                            <div>20.4</div>
+                            <div>20.1</div>
+                            <div>20.7</div>
+                            <div>22.2</div>
+                        </div>
+                        <div>
+                            <div>Depreciation</div>
+                            <div>0.2</div>
+                            <div>0.2</div>
+                            <div>0.1</div>
+                            <div>0.1</div>
+                            <div>0.2</div>
+                        </div>
+                        <div class="topBorder">
+                            <div>TOTAL OPERATING EXPENCE</div>
+                            <div>18.5</div>
+                            <div>20.5</div>
+                            <div>20.2</div>
+                            <div>20.9</div>
+                            <div>22.4</div>
+                        </div>
+                        <div class="topBorder">
+                            <div>NET OPERATING PROFIT</div>
+                            <div>5.9</div>
+                            <div>2.4</div>
+                            <div>4.1</div>
+                            <div>5.1</div>
+                            <div>(0.8)</div>
+                        </div>
+                    </div>
+
+                    <div class="table">
+                        <div>
+                            <div>Interest Expence</div>
+                            <div>0.7</div>
+                            <div>1.3</div>
+                            <div>1.4</div>
+                            <div>1.3</div>
+                            <div>2.5</div>
+                        </div>
+                        <div>
+                            <div>Other Income</div>
+                            <div>0.1</div>
+                            <div>0.5</div>
+                            <div>0.4</div>
+                            <div>0.3</div>
+                            <div>0.3</div>
+                        </div>
+                        <div>
+                            <div>Gain(Loss) on Asset Sale</div>
+                            <div>0.4</div>
+                            <div>-</div>
+                            <div>-</div>
+                            <div>0.1</div>
+                            <div>-</div>
+                        </div>
+                        <div class="topBorder">
+                            <div>TOTAL OTHER INCOME(EXP)</div>
+                            <div>(0.1)</div>
+                            <div>(0.8)</div>
+                            <div>(0.9)</div>
+                            <div>(0.9)</div>
+                            <div>(2.2)</div>
+                        </div>
+                        <div class="topBorder">
+                            <div>PROFIT BEFORE TAXES</div>
+                            <div>5.8</div>
+                            <div>1.6</div>
+                            <div>3.1</div>
+                            <div>4.2</div>
+                            <div>(3.0)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Income Stamtent-->
+
+            <!-- Projection of Future Payments-->
+            <div class="pull-left">
+                <div class="futurePayments bordered">
+                    <h3 class="text-center">Projection of Future Payments</h3>
+                    <img src="~/Content/images/graph_Future_Payment.jpg" alt="Alternate Text" />
+                </div>
+                <div class="graph">
+                    <h3 class="text-center">Graphs</h3>
+                    <img src="~/Content/images/graph_Future_Payment_2.jpg" alt="Alternate Text" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <!-- END: Projection of Future Payments-->
+        </div>
     </div>
 }

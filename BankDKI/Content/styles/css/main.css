@@ -1054,6 +1054,10 @@
   color: #ffffff;
   text-decoration: none;
   outline: none;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 .btn:focus {
   box-shadow: 0 0 2px 3px blue;
@@ -1145,7 +1149,7 @@ a:focus {
 }
 .content-wrapper {
   width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   background: #ffffff;
 }
 .col {
@@ -1232,6 +1236,10 @@ nav ul li a {
 nav ul li a:hover {
   background: #da2126;
   color: #ffffff;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 nav ul li a:focus {
   color: #ffffff;
