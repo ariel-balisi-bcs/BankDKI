@@ -13,5 +13,10 @@
     <div class="content-wrapper">
         @Html.Partial("_Menus")      
         @Html.Partial("_CreditAnalysis")
+        @Html.Partial("_CreditAnalysisReport")
     </div>
+}
+
+@section scripts{
+    @Scripts.Render("~/js/creditAnalysis")
 }

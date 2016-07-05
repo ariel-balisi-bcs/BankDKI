@@ -1,72 +1,124 @@
-﻿     <div class="applied-loan-amount-container bordered contentPadding">
-        <div class="applied-label col-md-6">
-            <span class="applied-loan">Applied Loan Amount:</span>
-            <span>Approved Loan Amount:</span>
+﻿    <div class="applied-loan-amount-container bordered contentPadding">
+    <div class="applied-label col-md-6">
+        <span class="applied-loan">Applied Loan Amount:</span>
+        <span>Approved Loan Amount:</span>
+    </div>
+    <div class="applied-amount col-md-6">
+        <span class="applied-loan">$999,999.00</span>
+        <span>$99,999.00</span>
+    </div>
+</div>
+<div class="payment-details bordered contentPadding">
+    <h3>Payment Details</h3>
+    <div class="table center alternate">
+        <div class="head">
+            <div>Transaction Date</div>
+            <div>Transaction Type</div>
+            <div>Transaction Amount</div>
+            <div>Transaction Details</div>
         </div>
-        <div class="applied-amount col-md-6">
-            <span class="applied-loan">$999,999.00</span>
-            <span>$99,999.00</span>
+        <div>
+            <div>11/12/15</div>
+            <div>Payment</div>
+            <div>$100</div>
+            <div>Sample Deatails</div>
+        </div>
+        <div>
+            <div>11/12/15</div>
+            <div>Payment</div>
+            <div>$100</div>
+            <div>Sample Deatails</div>
+        </div>
+        <div>
+            <div>11/12/15</div>
+            <div>Payment</div>
+            <div>$100</div>
+            <div>Sample Deatails</div>
         </div>
     </div>
-    <div class="payment-details bordered contentPadding">
-        <div>Payment Details</div>
-        <div class="table center alternate">
+</div>
+<div class="credit-rating-container bordered contentPadding">
+    <div class="credit-rating col-md-5">
+        <a href="#" id="viewCreditReport" class="btn btn-blue" data-toggle="tooltip" data-placement="left" title="Click to View Credit Analysis Report">VIEW CREDIT ANALYSIS REPORT</a>
+        <div class="credit-rating-label">Your Credit Rating Score</div>
+        <div class="credit-rating-score">AA</div>
+        <div class="credit-rating-date">On May 10, 2016</div>
+        <div class="credit-btn-container text-center">
+            <button class="btn btn-green" data-toggle="modal" data-target="#modalApprove">APPROVE</button>
+            <button class="btn btn-red" data-toggle="modal" data-target="#modalDeny">DENY</button>
+            <button class="btn btn-green hide" data-toggle="modal" data-target="#modalExport">EXPORT</button>
+        </div>
+    </div>
+    <div class="credit-rating col-md-7 bordered">
+        <div class="table center">
             <div class="head">
-                <div>Transaction Date</div>
-                <div>Transaction Type</div>
-                <div>Transaction Amount</div>
-                <div>Transaction Details</div>
+                <div>SCORE INGREDIENTS</div>
+                <div>HOW YOU RATE</div>
             </div>
-            <div>
-                <div>11/12/15</div>
-                <div>Payment</div>
-                <div>$100</div>
-                <div>Sample Deatails</div>
-            </div>
-            <div>
-                <div>11/12/15</div>
-                <div>Payment</div>
-                <div>$100</div>
-                <div>Sample Deatails</div>
-            </div>
-            <div>
-                <div>11/12/15</div>
-                <div>Payment</div>
-                <div>$100</div>
-                <div>Sample Deatails</div>
-            </div>
-        </div>
-    </div>
-    <div class="credit-rating-container bordered contentPadding">
-        <div class="credit-rating col-md-5">
-            <button class="btn btn-blue" tooltip="Click to View Credit Analysis Report">VIEW CREDIT ANALYSIS REPORT</button>
-            <div class="credit-rating-label">Your Credit Rating Score</div>
-            <div class="credit-rating-score">AA</div>
-            <div class="credit-rating-date">On May 10, 2016</div>
-            <div class="credit-btn-container text-center">
-                <button class="btn btn-green">APPROVE</button>
-                <button class="btn btn-red">DENY</button>
-            </div>
-        </div>
-        <div class="credit-rating col-md-7 bordered">
-            <div class="table center">
-                <div class="head">
-                    <div>SCORE INGREDIENTS</div>
-                    <div>HOW YOU RATE</div>
-                </div>
 
-                <div>
-                    <div>Payment History</div>
-                    <div><div class="rate-container"><div class="payment-history-rate"></div></div></div>
-                </div>
-                <div>
-                    <div>Amount of Debt</div>
-                    <div><div class="rate-container"><div class="amount-debt-rate"></div></div></div>
-                </div>
-                <div>
-                    <div>Length of Credit History</div>
-                    <div><div class="rate-container"><div class="length-credit-rate"></div></div></div>
-                </div>
+            <div>
+                <div>Payment History</div>
+                <div><div class="rate-container"><div class="payment-history-rate">GOOD</div></div></div>
+            </div>
+            <div>
+                <div>Amount of Debt</div>
+                <div><div class="rate-container"><div class="amount-debt-rate">NORMAL</div></div></div>
+            </div>
+            <div>
+                <div>Length of Credit History</div>
+                <div><div class="rate-container"><div class="length-credit-rate">EXCELLENT</div></div></div>
             </div>
         </div>
     </div>
+</div>
+<div id="modalApprove" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Proceed with the loan approval?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnYes" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                <button id="btnNo" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalDeny" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Deny with the loan approval?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnYes" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                <button id="btnNo" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalExport" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Would you like to export the report?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnYes" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                <button id="btnNo" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>

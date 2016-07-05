@@ -16,11 +16,11 @@
   width: 100%;
 }
 #creditAnalysis .credit-rating-container {
-  height: 250px;
+  height: 290px;
   margin-top: 12px;
 }
 #creditAnalysis .credit-rating-container .credit-rating {
-  height: 220px;
+  height: auto;
   padding: 0;
 }
 #creditAnalysis .credit-rating-container .credit-rating .credit-btn-container {
@@ -28,16 +28,16 @@
   display: block;
 }
 #creditAnalysis .credit-rating-container .credit-rating .credit-rating-label {
-  font-size: 14px;
+  font-size: 15px;
   color: #6d6d6d;
   text-align: center;
 }
 #creditAnalysis .credit-rating-container .credit-rating .credit-rating-score {
-  font-size: 36px;
+  font-size: 60px;
   text-align: center;
 }
 #creditAnalysis .credit-rating-container .credit-rating .credit-rating-date {
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
 }
 #creditAnalysis .credit-rating-container .credit-rating .btn.btn-blue {
@@ -47,15 +47,285 @@
   margin-left: auto;
   display: block;
 }
+#creditAnalysis .credit-rating-container .credit-rating .table {
+  height: 255px;
+}
 #creditAnalysis .credit-rating-container .credit-rating .table > div > div:first-child {
   width: 230px;
 }
-#creditAnalysis .credit-rating.bordered {
-  padding: 0;
+#creditAnalysis .credit-rating-container .credit-rating .table div {
+  line-height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  width: 300px;
 }
-#creditAnalysis .credit-rating.bordered .table.center div {
-  line-height: 32px;
+#creditAnalysis .credit-rating-container .credit-rating .rate-container {
+  background: #e0e0e0;
+  border-radius: 15px;
+  height: 30px;
+  color: #ffffff;
+}
+#creditAnalysis .credit-rating-container .credit-rating .rate-container .payment-history-rate {
+  background: #1ba6dd;
+  border-radius: 15px;
+  height: 30px;
+  margin-left: 0 !important;
+  width: 200px !important;
+  text-align: left;
+  text-indent: 20px;
+}
+#creditAnalysis .credit-rating-container .credit-rating .rate-container .amount-debt-rate {
+  background: #eaa10f;
+  border-radius: 15px;
+  height: 30px;
+  margin-left: 0 !important;
+  width: 150px !important;
+  text-align: left;
+  text-indent: 20px;
+}
+#creditAnalysis .credit-rating-container .credit-rating .rate-container .length-credit-rate {
+  background: #2baf73;
+  border-radius: 15px;
+  height: 30px;
+  margin-left: 0 !important;
+  width: 250px !important;
+  text-align: left;
+  text-indent: 20px;
 }
 #creditAnalysis .payment-details {
   margin-top: 12px;
+}
+#creditAnalysis #creditAnalysisReport {
+  padding-top: 20px;
+  float: left;
+}
+#creditAnalysis #creditAnalysisReport h1,
+#creditAnalysis #creditAnalysisReport h3 {
+  margin-bottom: 20px;
+}
+#creditAnalysis #creditAnalysisReport > h3:first-child {
+  background: #e0e0e0;
+  height: 50px;
+  line-height: 50px;
+}
+#creditAnalysis #creditAnalysisReport .credit-rating-report {
+  width: 370px;
+  float: left;
+  text-align: center;
+  height: 208px;
+}
+#creditAnalysis #creditAnalysisReport .credit-rating-report > span {
+  display: block;
+  font-size: 15px;
+}
+#creditAnalysis #creditAnalysisReport .credit-rating-report > span:nth-child(3) {
+  font-size: 60px;
+}
+#creditAnalysis #creditAnalysisReport .credit-description {
+  width: 770px;
+  margin-left: 20px;
+  float: left;
+  height: 208px;
+}
+#creditAnalysis #creditAnalysisReport .credit-description > span {
+  background: #e0e0e0;
+  display: block;
+  padding: 10px 30px;
+}
+#creditAnalysis #creditAnalysisReport .credit-description > textarea {
+  padding: 30px 30px 0;
+  width: 100%;
+  border: none;
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  font-size: 14px;
+  resize: none;
+}
+#creditAnalysis #creditAnalysisReport .credit-description hr {
+  background: #b7b7b7;
+  float: left;
+  height: 2px;
+  margin-top: 0;
+  width: 720px;
+  margin-left: 25px;
+  margin-bottom: 0;
+}
+#creditAnalysis #creditAnalysisReport .payment-history-report {
+  float: left;
+  width: 370px;
+  padding-bottom: 0;
+}
+#creditAnalysis #creditAnalysisReport .payment-history-report > div:nth-child(2) {
+  background: #e0e0e0;
+  border-radius: 15px;
+  float: right;
+  font-size: 12px;
+  margin-left: 45px;
+  text-indent: 10px;
+  width: 120px;
+}
+#creditAnalysis #creditAnalysisReport .payment-history-report > div:nth-child(2) > div {
+  background: #1ba6dd;
+  border-radius: 15px;
+  width: 65px;
+}
+#creditAnalysis #creditAnalysisReport .payment-history-report > h5 {
+  float: left;
+}
+#creditAnalysis #creditAnalysisReport .payment-history-report > textarea {
+  float: left;
+  margin-top: 15px;
+  text-align: left;
+  width: 100%;
+  border: none;
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  font-size: 14px;
+  resize: none;
+  height: 80px;
+}
+#creditAnalysis #creditAnalysisReport .payment-history-report hr {
+  background: #b7b7b7;
+  float: left;
+  height: 2px;
+  width: 100%;
+  margin: 0;
+}
+#creditAnalysis #creditAnalysisReport .amount-debit-report {
+  float: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  width: 370px;
+  padding-bottom: 0;
+}
+#creditAnalysis #creditAnalysisReport .amount-debit-report > div:nth-child(2) {
+  background: #e0e0e0;
+  border-radius: 15px;
+  float: right;
+  font-size: 12px;
+  margin-left: 45px;
+  text-indent: 10px;
+  width: 120px;
+}
+#creditAnalysis #creditAnalysisReport .amount-debit-report > div:nth-child(2) > div {
+  background: #eaa10f;
+  border-radius: 15px;
+  width: 80px;
+}
+#creditAnalysis #creditAnalysisReport .amount-debit-report > h5 {
+  float: left;
+}
+#creditAnalysis #creditAnalysisReport .amount-debit-report > textarea {
+  float: left;
+  margin-top: 15px;
+  text-align: left;
+  width: 100%;
+  border: none;
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  font-size: 14px;
+  resize: none;
+  height: 80px;
+}
+#creditAnalysis #creditAnalysisReport .amount-debit-report hr {
+  background: #b7b7b7;
+  float: left;
+  height: 2px;
+  width: 100%;
+  margin: 0;
+}
+#creditAnalysis #creditAnalysisReport .length-credit-history {
+  float: left;
+  width: 370px;
+  padding-bottom: 0;
+}
+#creditAnalysis #creditAnalysisReport .length-credit-history > div:nth-child(2) {
+  background: #e0e0e0;
+  border-radius: 15px;
+  float: right;
+  font-size: 12px;
+  margin-left: 5px;
+  text-indent: 10px;
+  width: 120px;
+}
+#creditAnalysis #creditAnalysisReport .length-credit-history > div:nth-child(2) > div {
+  background: #2baf73;
+  border-radius: 15px;
+  width: 100px;
+}
+#creditAnalysis #creditAnalysisReport .length-credit-history > h5 {
+  float: left;
+}
+#creditAnalysis #creditAnalysisReport .length-credit-history > textarea {
+  float: left;
+  margin-top: 15px;
+  text-align: left;
+  width: 100%;
+  border: none;
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  font-size: 14px;
+  resize: none;
+  height: 80px;
+}
+#creditAnalysis #creditAnalysisReport .length-credit-history hr {
+  background: #b7b7b7;
+  float: left;
+  height: 2px;
+  width: 100%;
+  margin: 0;
+}
+#creditAnalysis #creditAnalysisReport > hr {
+  margin-bottom: 25px;
+  margin-top: 10px;
+  border: 2px solid #4f4f4f;
+  float: left;
+  width: 100%;
+}
+#creditAnalysis #creditAnalysisReport > div {
+  float: left;
+  margin-bottom: 20px;
+}
+#creditAnalysis #creditAnalysisReport textarea {
+  margin-bottom: 5px;
+  resize: none;
+}
+#creditAnalysis #creditAnalysisReport #btnSaveComment {
+  display: block;
+  margin: 0 auto 25px;
+}
+#creditAnalysis .modal .modal-dialog {
+  width: 375px;
+  top: 30%;
+}
+#creditAnalysis .modal .modal-dialog .modal-header {
+  background: #eaa10f;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#creditAnalysis .modal .modal-dialog .modal-header .modal-title {
+  color: #ffffff;
+}
+#creditAnalysis .modal .modal-dialog .modal-header button.close {
+  color: #ffffff;
+  font-size: 28px;
+  opacity: 1;
+}
+#creditAnalysis .modal .modal-dialog .modal-footer {
+  background: #e0e0e0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#creditAnalysis .modal .modal-dialog .modal-footer .btn.btn-default {
+  color: #6d6d6d;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 35px;
+  min-width: 110px;
+  border-radius: 5px;
+}
+#creditAnalysis .modal .modal-dialog .modal-body {
+  padding: 30px;
+}
+#creditAnalysis .btn-edit-save {
+  float: right;
+  font-size: 24px;
+  margin: 5px 25px 0 5px;
 }

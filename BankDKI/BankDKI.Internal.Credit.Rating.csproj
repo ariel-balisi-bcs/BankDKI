@@ -180,6 +180,7 @@
     <Content Include="Content\images\graph_IndustryComparison.jpg" />
     <Content Include="Content\images\logoTheCompany.jpg" />
     <Content Include="Content\images\mainLogo.jpg" />
+    <Content Include="Content\scripts\creditAnalysis.js" />
     <Content Include="Content\scripts\lib\bootstrap.min.js" />
     <Content Include="Content\scripts\lib\jquery.min.js" />
     <Content Include="Content\scripts\nav.js" />
@@ -392,6 +393,8 @@
     <Content Include="Views\CreditAnalysis\Index.cshtml" />
     <Content Include="Views\IndustryComparison\Index.cshtml" />
     <Content Include="Views\Shared\_Menus.cshtml" />
+    <Content Include="Views\CreditAnalysis\_CreditAnalysis.cshtml" />
+    <Content Include="Views\CreditAnalysis\_CreditAnalysisReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
