@@ -184,6 +184,7 @@
     <Content Include="Content\scripts\lib\bootstrap.min.js" />
     <Content Include="Content\scripts\lib\jquery.min.js" />
     <Content Include="Content\scripts\nav.js" />
+    <Content Include="Content\scripts\sensitivityAnalysis.js" />
     <Content Include="Content\styles\css\accountingInfo.css" />
     <Content Include="Content\styles\css\button.css" />
     <Content Include="Content\styles\css\clientSelect.css" />

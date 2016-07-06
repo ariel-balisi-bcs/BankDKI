@@ -21,16 +21,16 @@
                     <label for="dd-variable">Variable</label>
                 </div>
                 <div>
-                    <select name="dd-variable">
-                        <option value="" selected>Price</option>
-                        <option value="">Volume</option>
-                        <option value="">COGS / Sales</option>
-                        <option value="">SGA / Sales</option>
-                        <option value="">Tax Rate</option>
-                        <option value="">Int Rate</option>
-                        <option value="">AR DOH</option>
-                        <option value="">INV DOH</option>
-                        <option value="">AP DOH</option>
+                    <select id="select-variable" name="dd-variable">
+                        <option value="Price" selected>Price</option>
+                        <option value="Volume">Volume</option>
+                        <option value="COGS / Sales">COGS / Sales</option>
+                        <option value="SGA / Sales">SGA / Sales</option>
+                        <option value="Tax Rate">Tax Rate</option>
+                        <option value="Int Rate">Int Rate</option>
+                        <option value="AR DOH">AR DOH</option>
+                        <option value="INV DOH">INV DOH</option>
+                        <option value="AP DOH">AP DOH</option>
                     </select>
                 </div>
 
@@ -38,7 +38,7 @@
                     <label for="dd-ratio1">Ratio 1</label>
                 </div>
                 <div>
-                    <select name="dd-ratio1">
+                    <select id="select-ratio1" name="dd-ratio1">
                         <option value="" selected>ROE</option>
                         <option value="">ROS</option>
                         <option value="">ATO</option>
@@ -71,7 +71,7 @@
                     <label for="dd-ratio2">Ratio 2</label>
                 </div>
                 <div>
-                    <select name="dd-ratio2">
+                    <select id="select-ratio2" name="dd-ratio2">
                         <option value="">ROE</option>
                         <option value="">ROS</option>
                         <option value="">ATO</option>
@@ -104,7 +104,7 @@
                     <label for="dd-ratio3">Ratio 3</label>
                 </div>
                 <div>
-                    <select name="dd-ratio3">
+                    <select id="select-ratio3" name="dd-ratio3">
                         <option value="">ROE</option>
                         <option value="">ROS</option>
                         <option value="">ATO</option>
@@ -137,7 +137,7 @@
                     <label for="dd-ratio4">Ratio 4</label>
                 </div>
                 <div>
-                    <select name="dd-ratio4">
+                    <select id="select-ratio4" name="dd-ratio4">
                         <option value="">ROE</option>
                         <option value="">ROS</option>
                         <option value="">ATO</option>
@@ -170,7 +170,7 @@
                     <label for="dd-ratio5">Ratio 5</label>
                 </div>
                 <div>
-                    <select name="dd-ratio5">
+                    <select id="select-ratio5" name="dd-ratio5">
                         <option value="">ROE</option>
                         <option value="">ROS</option>
                         <option value="">ATO</option>
@@ -203,8 +203,13 @@
                     <label for="dd-date">Date</label>
                 </div>
                 <div>
-                    <select name="dd-date">
-                        <option value="">2018</option>
+                    <select id="select-date" name="dd-date">
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018" selected>2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
                     </select>
                 </div>
             </div>
@@ -225,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="table-header">Price</div>
+                <div id="variable-row" class="table-header">Price</div>
 
                 <div class="table alternate">
                     <div>
@@ -307,9 +312,13 @@
                         <div>4.9</div>
                     </div>
                 </div>
-                <div class="table-footer">2018</div>
+                <div id="date-row" class="table-footer">2018</div>
             </div>
         </div>
     </div>
 
+}
+
+@section scripts{
+    @Scripts.Render("~/js/sensitivityAnalysis")
 }

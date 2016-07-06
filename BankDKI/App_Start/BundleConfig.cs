@@ -28,6 +28,9 @@ namespace BankDKI
             bundles.Add(new ScriptBundle("~/js/creditAnalysis").Include(
                 "~/Content/scripts/creditAnalysis.js"));
 
+            bundles.Add(new ScriptBundle("~/js/sensitivityAnalysis").Include(
+                "~/Content/scripts/sensitivityAnalysis.js"));
+
             bundles.Add(new StyleBundle("~/css/lib").Include(
                         "~/Content/styles/lib/bootstrap.min.css"));
 
