@@ -211,6 +211,7 @@
     <Content Include="Content\scripts\creditAnalysis.js" />
     <Content Include="Content\scripts\lib\bootstrap.min.js" />
     <Content Include="Content\scripts\lib\jquery.min.js" />
+    <Content Include="Content\scripts\login.js" />
     <Content Include="Content\scripts\nav.js" />
     <Content Include="Content\scripts\sensitivityAnalysis.js" />
     <Content Include="Content\styles\css\accountingInfo.css" />

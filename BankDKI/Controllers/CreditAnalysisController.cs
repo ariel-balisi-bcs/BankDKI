@@ -46,7 +46,7 @@ namespace BankDKI.Controllers
             entities.CreditRatingHistories.Attach(creditRatingTable);
             entities.Entry(creditRatingTable).State = System.Data.EntityState.Modified;
             entities.SaveChanges();
-            return RedirectToAction("Index");
+            return Json(new { Status="Success"});
         }
     }
 }

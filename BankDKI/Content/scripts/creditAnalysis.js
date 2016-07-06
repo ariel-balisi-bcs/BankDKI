@@ -55,7 +55,17 @@
                 textArea.attr("readonly","readonly");
                 $(this).parent().find(".btnEdit").removeClass("hide");
                 $(this).addClass("hide");
-                $("form").submit();
+                var $form = $("form");
+                var url = $form.attr("action");
+                $.ajax({
+                    data: $($form).serialize(),
+                    type: "POST",
+                    url: url
+                }).success(function (result) {
+                    //done//success                    
+                }).error(function (msg) {
+                    //error encounteerd
+                });
                 return;
             });
         });

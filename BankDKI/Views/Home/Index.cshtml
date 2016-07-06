@@ -14,7 +14,7 @@
 
 @section content
 {
-    @using (Html.BeginForm("", "", FormMethod.Post)) { 
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post)) { 
         @Html.HiddenFor(m=>m.Id)
         <div class="content-wrapper">
             <div class="dki-home-login">
@@ -26,7 +26,7 @@
                     <div class="login-container">
                         @Html.TextBoxFor(m => m.UserName, new { @class = "dki-username", placeholder = "Username" })
                         @Html.TextBoxFor(m => m.Password, new { @class = "dki-password", placeholder = "Password" })                    
-                        <input type="button" class="btn-dki-login btn-red btn" value="Login" />
+                        <input type="button" class="btn-dki-login btn-red btn" value="Login"/>
                         <div class="dki-forgot-password">
                             <a href="#">Forgot Password?</a>
                         </div>
@@ -35,4 +35,8 @@
             </div>
         </div>
     }
+}
+
+@section scripts {
+    @Scripts.Render("~/js/login")
 }
