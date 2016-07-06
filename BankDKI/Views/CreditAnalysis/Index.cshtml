@@ -1,4 +1,5 @@
-﻿@{
+﻿@model BankDKI.Models.CreditRatingHistoryModel
+@{
     ViewBag.Title = "Bank DKI - Credit Analysis";
     ViewBag.Active = "creditAnalysis";
 }
@@ -13,7 +14,7 @@
     <div class="content-wrapper">
         @Html.Partial("_Menus")      
         @Html.Partial("_CreditAnalysis")
-        @Html.Partial("_CreditAnalysisReport")
+        @Html.Partial("_CreditAnalysisReport",Model)
     </div>
 }
 

@@ -44,9 +44,9 @@
         <div class="credit-rating-score">AA</div>
         <div class="credit-rating-date">On May 10, 2016</div>
         <div class="credit-btn-container text-center">
-            <button class="btn btn-green" data-toggle="modal" data-target="#modalApprove">APPROVE</button>
-            <button class="btn btn-red" data-toggle="modal" data-target="#modalDeny">DENY</button>
-            <button class="btn btn-green hide" data-toggle="modal" data-target="#modalExport">EXPORT</button>
+            <button id="btnApprove" class="btn btn-green" data-toggle="modal" data-target="#modalApprove">APPROVE</button>
+            <button id="btnDeny" class="btn btn-red" data-toggle="modal" data-target="#modalDeny">DENY</button>
+            <button id="btnExport" class="btn btn-green hide" data-toggle="modal" data-target="#modalExport">EXPORT</button>
         </div>
     </div>
     <div class="credit-rating col-md-7 bordered">
@@ -82,8 +82,8 @@
                 <p>Proceed with the loan approval?</p>
             </div>
             <div class="modal-footer">
-                <button id="btnYes" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
-                <button id="btnNo" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-default btnYes" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-default btnNo" data-dismiss="modal">No</button>
             </div>
         </div>
     </div>
@@ -99,8 +99,8 @@
                 <p>Deny with the loan approval?</p>
             </div>
             <div class="modal-footer">
-                <button id="btnYes" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
-                <button id="btnNo" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-default btnYes" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-default btnNo" data-dismiss="modal">No</button>
             </div>
         </div>
     </div>
@@ -116,8 +116,8 @@
                 <p>Would you like to export the report?</p>
             </div>
             <div class="modal-footer">
-                <button id="btnYes" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
-                <button id="btnNo" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-default btnYes" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-default btnNo" data-dismiss="modal">No</button>
             </div>
         </div>
     </div>

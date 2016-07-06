@@ -61,6 +61,8 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -147,9 +149,32 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndustryComparisonController.cs" />
     <Compile Include="Controllers\SensitivityController.cs" />
+    <Compile Include="DataLayer\CreditRatingHistory.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\CreditRatingModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditRatingModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\CreditRatingModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\CreditRatingModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditRatingModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\User.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CreditRatingHistoryModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +203,9 @@
     <Content Include="Content\images\graph_Future_Payment.jpg" />
     <Content Include="Content\images\graph_Future_Payment_2.jpg" />
     <Content Include="Content\images\graph_IndustryComparison.jpg" />
+    <Content Include="Content\images\login-main-logo.png" />
+    <Content Include="Content\images\login-password-icon.png" />
+    <Content Include="Content\images\login-username-icon.png" />
     <Content Include="Content\images\logoTheCompany.jpg" />
     <Content Include="Content\images\mainLogo.jpg" />
     <Content Include="Content\scripts\creditAnalysis.js" />
@@ -256,6 +284,16 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="DataLayer\CreditRatingModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CreditRatingModel.edmx</DependentUpon>
+      <LastGenOutput>CreditRatingModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataLayer\CreditRatingModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CreditRatingModel.edmx</DependentUpon>
+      <LastGenOutput>CreditRatingModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Content\styles\less\main.less" />
     <Content Include="Content\styles\less\variable.less" />
@@ -357,6 +395,13 @@
     <Content Include="Content\styles\less\industryComparison.less" />
     <Content Include="Content\styles\less\logIn.less" />
     <Content Include="Content\styles\less\clientSelect.less" />
+    <EntityDeploy Include="DataLayer\CreditRatingModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CreditRatingModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataLayer\CreditRatingModel.edmx.diagram">
+      <DependentUpon>CreditRatingModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -399,10 +444,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

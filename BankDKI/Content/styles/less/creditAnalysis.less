@@ -184,6 +184,7 @@
                     background: @blue;
                     border-radius: 15px;
                     width: 65px;
+                    color:@white;
                 }
             }
             > h5 {
@@ -227,6 +228,7 @@
                     background: @yellow;
                     border-radius: 15px;
                     width: 80px;
+                    color:@white;
                 }
             }
             > h5{
@@ -269,6 +271,7 @@
                     background: @green;
                     border-radius: 15px;
                     width: 100px;
+                    color:@white;
                 }
             }
             > h5{
@@ -312,9 +315,16 @@
             resize:none;
         }
 
-        #btnSaveComment{
-            display: block;            
-            margin:0 auto 25px 
+        .glyphicon.glyphicon-edit, .glyphicon.glyphicon-save {
+            color:@baseColor;
+        }
+
+        #Comments{
+            float: left;
+            height: 120px;
+            width: 1160px;
+            font-size:14px;
+            border: 1px solid @lightGray;
         }
     }
 
@@ -358,6 +368,7 @@
     .btn-edit-save{
         float:right;
         font-size:24px;
-        margin:5px 25px 0 5px;        
+        margin:5px 25px 0 5px;    
+        cursor:pointer;    
     }
 }

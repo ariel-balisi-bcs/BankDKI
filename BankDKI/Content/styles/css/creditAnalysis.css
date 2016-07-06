@@ -168,6 +168,7 @@
   background: #1ba6dd;
   border-radius: 15px;
   width: 65px;
+  color: #ffffff;
 }
 #creditAnalysis #creditAnalysisReport .payment-history-report > h5 {
   float: left;
@@ -210,6 +211,7 @@
   background: #eaa10f;
   border-radius: 15px;
   width: 80px;
+  color: #ffffff;
 }
 #creditAnalysis #creditAnalysisReport .amount-debit-report > h5 {
   float: left;
@@ -250,6 +252,7 @@
   background: #2baf73;
   border-radius: 15px;
   width: 100px;
+  color: #ffffff;
 }
 #creditAnalysis #creditAnalysisReport .length-credit-history > h5 {
   float: left;
@@ -287,9 +290,16 @@
   margin-bottom: 5px;
   resize: none;
 }
-#creditAnalysis #creditAnalysisReport #btnSaveComment {
-  display: block;
-  margin: 0 auto 25px;
+#creditAnalysis #creditAnalysisReport .glyphicon.glyphicon-edit,
+#creditAnalysis #creditAnalysisReport .glyphicon.glyphicon-save {
+  color: #6d6d6d;
+}
+#creditAnalysis #creditAnalysisReport #Comments {
+  float: left;
+  height: 120px;
+  width: 1160px;
+  font-size: 14px;
+  border: 1px solid #b7b7b7;
 }
 #creditAnalysis .modal .modal-dialog {
   width: 375px;
@@ -328,4 +338,5 @@
   float: right;
   font-size: 24px;
   margin: 5px 25px 0 5px;
+  cursor: pointer;
 }

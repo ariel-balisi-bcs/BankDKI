@@ -1,17 +1,38 @@
-﻿@{
+﻿@model BankDKI.Models.UserModel
+
+@{
     ViewBag.Title = "Bank DKI - Login";
     ViewBag.Active = "logIn";
 }
 
+@Styles.Render("~/css/logIn")
+
 @section header
 {
-    
+
 }
 
 @section content
 {
-    <div class="content-wrapper">
-        <h1>Login</h1>
-        <div>This is a test only page. Check if less is working.</div>
-    </div>
+    @using (Html.BeginForm("", "", FormMethod.Post)) { 
+        @Html.HiddenFor(m=>m.Id)
+        <div class="content-wrapper">
+            <div class="dki-home-login">
+                <div class="login-wrapper">
+                    <div class="login-header">
+                        <h1>Bank DKI</h1>
+                        <div class="home-logo"></div>
+                    </div>
+                    <div class="login-container">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "dki-username", placeholder = "Username" })
+                        @Html.TextBoxFor(m => m.Password, new { @class = "dki-password", placeholder = "Password" })                    
+                        <input type="button" class="btn-dki-login btn-red btn" value="Login" />
+                        <div class="dki-forgot-password">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 }
