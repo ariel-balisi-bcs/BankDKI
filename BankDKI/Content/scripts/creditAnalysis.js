@@ -10,7 +10,7 @@
             scrollTop(creditAnalysisReport);
         });
 
-        var btnYes = $("#modalApprove,#modalDeny").find(".btnYes");
+        var btnYes = $("#modalApprove,#modalDeny,#modalExport").find(".btnYes");
 
         $(btnYes).each(function () {
             $(this).on('click', function () {
@@ -18,17 +18,19 @@
                     status = "Approve";
                     $('#modalExport').find(".modal-header").css("background", "#2BAF73");
                     $('#modalExport').find(".modal-title").text("Loan Approved");
+                    HideShowButtons();
                 }
                 else if ($(this).parents("#modalDeny").length > 0) {
                     status = "Deny";
                     $('#btnExport').css("background", "#DA2126");
                     $('#modalExport').find(".modal-header").css("background", "#DA2126");
                     $('#modalExport').find(".modal-title").text("Loan Denied");
+                    HideShowButtons();
                 }
-
-                $('#btnApprove').addClass("hide");
-                $('#btnDeny').addClass("hide");
-                $('#btnExport').removeClass("hide");
+                else if ($(this).parents("#modalExport").length > 0)
+                {
+                    window.open("../CreditRatingReport/CreditRatingReport.pdf", "CreditRatingReport");
+                }               
             });
         });
 
@@ -73,10 +75,15 @@
         btnViewCreditHistory.tooltip();
     });
 
-    function scrollTop(element)
-    {
+    function scrollTop(element) {
         $('html, body').animate({
             scrollTop: ($(element).offset().top)
         }, 500);
-    }
+    };
+
+    function HideShowButtons() {
+        $('#btnApprove').addClass("hide");
+        $('#btnDeny').addClass("hide");
+        $('#btnExport').removeClass("hide");
+    };
 }(jQuery)
