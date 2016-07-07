@@ -23,9 +23,10 @@
                         <h1>Bank DKI</h1>
                         <div class="home-logo"></div>
                     </div>
+                    <div class="error-message hide">Invalid username or password! Please try again.</div>
                     <div class="login-container">
                         @Html.TextBoxFor(m => m.UserName, new { @class = "dki-username", placeholder = "Username" })
-                        @Html.TextBoxFor(m => m.Password, new { @class = "dki-password", placeholder = "Password" })                    
+                        @Html.TextBoxFor(m => m.Password, new { @class = "dki-password", placeholder = "Password",type="Password" })                    
                         <input type="button" class="btn-dki-login btn-red btn" value="Login"/>
                         <div class="dki-forgot-password">
                             <a href="#">Forgot Password?</a>

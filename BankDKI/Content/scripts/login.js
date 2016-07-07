@@ -9,9 +9,13 @@
                 type: "POST"
             }).success(function (result) {
                 //success redirect
-                window.location = result.RedirectUrl;
+                if(result.Status=="Success")
+                    window.location = result.RedirectUrl;
+                else
+                    $('.error-message').removeClass("hide");
             }).error(function (msg) {
                 //error encountered
+                $('.error-message').removeClass("hide");
             });
         });
     });

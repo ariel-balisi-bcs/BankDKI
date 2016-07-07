@@ -135,4 +135,5 @@
 #clientSelect #btnNextClientSelection {
   margin: 80px auto;
   display: block;
+  width: 200px;
 }

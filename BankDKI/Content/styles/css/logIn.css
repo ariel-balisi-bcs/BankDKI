@@ -38,7 +38,7 @@
     display:block;
 }
 
-#logIn .login-container input[type='text'] {
+#logIn .login-container input[type='text'], #logIn .login-container input[type='password'] {
     border-radius:5px;
     border:1px solid #c4c4c4;
     height:50px;
@@ -71,4 +71,15 @@
     margin-top:50px;
     font-weight:normal;
     text-align:center;
+}
+
+.error-message{
+    border: 1px solid #DA2126;
+    color: #DA2126;
+    line-height: 40px;
+    margin-top: 25px;
+}
+
+.login-wrapper{
+    width:400px;
 }

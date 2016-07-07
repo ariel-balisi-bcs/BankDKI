@@ -25,7 +25,7 @@ namespace BankDKI.Controllers
                 return Json(new { Status = "Error", RedirectUrl = "" });
 
             Session["UserName"] = model.UserName;
-            return Json(new { Status = "Sucess", RedirectUrl = Url.Action("Information", "Financial") });
+            return Json(new { Status = "Success", RedirectUrl = Url.Action("Select", "Client") });
         }
     }
 }
