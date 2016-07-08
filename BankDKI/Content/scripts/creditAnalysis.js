@@ -72,7 +72,8 @@
             });
         });
 
-        btnViewCreditHistory.tooltip();
+        //btnViewCreditHistory.tooltip();
+        $('[data-toggle="tooltip"]').tooltip();
     });
 
     function scrollTop(element) {
