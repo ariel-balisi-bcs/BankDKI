@@ -51,13 +51,13 @@
                             </ul>
                         </div>
                         <div class="next">
-                            <a href="javascript:void(0);">
+                            <a class="btnClientSelect" href="javascript:void(0);">
                                 <span class="glyphicon glyphicon-chevron-right"></span>
                             </a>
                         </div>
                         <div class="clientSelected bordered">
                             <ul>
-                                <li>Client B</li>
+                                
                             </ul>
                         </div>
                         <div class="clearfix"></div>
@@ -65,17 +65,107 @@
                 </div>
             </div>
             <!-- END: Construction -->
-
+            <!-- Commerce -->
             <div id="commerce" class="tab-pane fade">
-                <h3>Commerce</h3>
-                <p>Some content in menu 1.</p>
+                <div class="bordered contentPadding">
+                    <div id="searchClient">
+                        <input type="text" class="textbox" placeholder="search your client" />
+                        <a class="icon" href="javascript:void(0);">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="clients">
+                        <div class="clientName bordered contentPadding">
+                            <span class="glyphicon glyphicon-user pull-left"></span>
+                            <div class="clientDetails pull-left">
+                                <h4>Client Name</h4>
+                                <p>Detais of the seleced entity[optional]</p>
+                            </div>
+                        </div>
+                        <div class="clientList bordered">
+                            <ul>
+                                <li tabindex="0">Client A</li>
+                                <li tabindex="0">Client B</li>
+                                <li tabindex="0">Client C</li>
+                                <li tabindex="0">Client D</li>
+                                <li tabindex="0">Client E</li>
+                                <li tabindex="0">Client F</li>
+                                <li tabindex="0">Client G</li>
+                                <li tabindex="0">Client H</li>
+                                <li tabindex="0">Client I</li>
+                                <li tabindex="0">Client J</li>
+                            </ul>
+                        </div>
+                        <div class="next">
+                            <a class="btnClientSelect" href="javascript:void(0);">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                        <div class="clientSelected bordered">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
             </div>
+            <!-- END: Commerce -->
+
+            <!-- Financial Institution -->
             <div id="financialInstitution" class="tab-pane fade">
-                <h3>FINANCIAL INSTITUTION</h3>
-                <p>Some content in menu 1.</p>
+                <div class="bordered contentPadding">
+                    <div id="searchClient">
+                        <input type="text" class="textbox" placeholder="search your client" />
+                        <a class="icon" href="javascript:void(0);">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="clients">
+                        <div class="clientName bordered contentPadding">
+                            <span class="glyphicon glyphicon-user pull-left"></span>
+                            <div class="clientDetails pull-left">
+                                <h4>Client Name</h4>
+                                <p>Detais of the seleced entity[optional]</p>
+                            </div>
+                        </div>
+                        <div class="clientList bordered">
+                            <ul>
+                                <li tabindex="0">Client A</li>
+                                <li tabindex="0">Client B</li>
+                                <li tabindex="0">Client C</li>
+                                <li tabindex="0">Client D</li>
+                                <li tabindex="0">Client E</li>
+                                <li tabindex="0">Client F</li>
+                                <li tabindex="0">Client G</li>
+                                <li tabindex="0">Client H</li>
+                                <li tabindex="0">Client I</li>
+                                <li tabindex="0">Client J</li>
+                            </ul>
+                        </div>
+                        <div class="next">
+                            <a class="btnClientSelect" href="javascript:void(0);">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                        <div class="clientSelected bordered">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
             </div>
+            <!-- Financial Institution -->
         </div>
 
         <a href="@Url.Action("Information","Financial")" id="btnNextClientSelection" class="btn btn-red">NEXT</a>
     </div>
+}
+
+@section scripts {
+    @Scripts.Render("~/js/clientSelect")
 }

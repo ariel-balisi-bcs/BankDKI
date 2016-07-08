@@ -50,7 +50,7 @@
         }
     }
 
-    #construction{
+    #construction, #commerce, #financialInstitution{
         #searchClient{
             width:740px;
             margin:20px auto;
@@ -119,7 +119,7 @@
                                 background:@tableAlternateBg;
                             }
 
-                            &:focus{
+                            &.selected{
                                 background:@red;
                                 color:@white;
                                 -moz-transition: background .2s ease-in-out;
@@ -150,6 +150,8 @@
                 }
 
                 &.clientSelected{
+                    overflow-y:scroll;
+
                     ul{
                         padding:0;
 
@@ -162,6 +164,15 @@
 
                             &:nth-child(odd){
                                 background:@tableAlternateBg;
+                            }
+
+                            &:focus{
+                                background:@red;
+                                color:@white;
+                                -moz-transition: background .2s ease-in-out;
+                                -o-transition: background .2s ease-in-out;
+                                -webkit-transition: background .2s ease-in-out;
+                                transition: background .2s ease-in-out;
                             }
                         }
                     }

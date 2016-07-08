@@ -34,6 +34,9 @@ namespace BankDKI
             bundles.Add(new ScriptBundle("~/js/login").Include(
                 "~/Content/scripts/login.js"));
 
+            bundles.Add(new ScriptBundle("~/js/clientSelect").Include(
+                "~/Content/scripts/clientSelect.js"));
+
             bundles.Add(new StyleBundle("~/css/lib").Include(
                         "~/Content/styles/lib/bootstrap.min.css"));
 

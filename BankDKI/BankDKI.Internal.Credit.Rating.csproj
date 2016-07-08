@@ -208,6 +208,7 @@
     <Content Include="Content\images\login-username-icon.png" />
     <Content Include="Content\images\logoTheCompany.jpg" />
     <Content Include="Content\images\mainLogo.jpg" />
+    <Content Include="Content\scripts\clientSelect.js" />
     <Content Include="Content\scripts\creditAnalysis.js" />
     <Content Include="Content\scripts\lib\bootstrap.min.js" />
     <Content Include="Content\scripts\lib\jquery.min.js" />
