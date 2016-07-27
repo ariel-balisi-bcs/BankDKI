@@ -50,7 +50,6 @@ nav ul {
   padding: 0;
 }
 nav ul.dynamic li {
-  width: 19.9%;
   display: table;
 }
 nav ul.dynamic li a {
