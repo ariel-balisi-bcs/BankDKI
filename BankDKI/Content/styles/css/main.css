@@ -1278,7 +1278,7 @@ nav ul li a:focus {
   padding: 4px;
   color: #6d6d6d;
 }
-.table > div.head div {
+.table > div.head > div {
   font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
   background: #898989;
   border-left: 1px solid #ffffff;
@@ -1286,7 +1286,7 @@ nav ul li a:focus {
   color: #ffffff;
   line-height: 32px;
 }
-.table > div.head div:first-child {
+.table > div.head > div:first-child {
   border-left: none;
 }
 .table.center {

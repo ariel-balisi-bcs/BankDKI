@@ -1,1 +1,106 @@
-﻿
+﻿#fsStandAlone h2 {
+  margin-bottom: 40px;
+}
+#fsStandAlone p {
+  margin-bottom: 10px;
+}
+#fsStandAlone #accordion .panel {
+  margin-bottom: 0;
+}
+#fsStandAlone #accordion .panel .panel-heading {
+  padding: 0;
+  border-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-bottom: 8px;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title > div {
+  cursor: default;
+  position: relative;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title > div:before {
+  content: '-';
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -12px;
+  font-size: 20px;
+  box-shadow: 1px 1px 1px #000000;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title > div.collapsed:before {
+  content: '+';
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .labels {
+  background: #727272;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .labels div {
+  line-height: normal;
+  margin-left: 50px;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .audited {
+  background: #9E9E9E;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .audited div:first-child {
+  font-size: 15px;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .audited div:last-child {
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 12px;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .proj {
+  background: #1BA6DD;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .proj div:first-child {
+  font-size: 15px;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head .proj div:last-child {
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 12px;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head > div:not(.labels) {
+  width: 100px;
+  text-align: right;
+}
+#fsStandAlone #accordion .panel .panel-heading .panel-title .table .head > div:not(.labels) div {
+  line-height: normal;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div div:not(.labels) {
+  text-align: right;
+  width: 100px;
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 12px;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div div.labels span {
+  text-transform: uppercase;
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 14px;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div.total {
+  background: #727272;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div.total div {
+  color: #ffffff;
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 12px;
+  border-top: 8px solid #ffffff;
+  border-bottom: 8px solid #ffffff;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div.total + .total div {
+  border-top: 0;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div.spacer {
+  background: none;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div.spacer div {
+  background: none;
+}
+#fsStandAlone #accordion .panel .panel-collapse .table div.marginBottom {
+  margin-bottom: 20px;
+}
