@@ -1,1 +1,63 @@
-﻿
+﻿#financialRatios .main-context-box {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#financialRatios .main-context-box .table-heading {
+  font-size: 16px;
+  margin: 10px 0;
+}
+#financialRatios .main-context-box #financialratio-table {
+  border-collapse: collapse;
+  display: table;
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+#financialRatios .main-context-box #financialratio-table div {
+  text-align: right;
+  padding-right: 7px;
+}
+#financialRatios .main-context-box #financialratio-table div.head div {
+  background: #6d6d6d;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 7px;
+  text-align: right;
+  text-transform: uppercase;
+}
+#financialRatios .main-context-box #financialratio-table div.head div span {
+  display: block;
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+#financialRatios .main-context-box #financialratio-table div.head div.audited {
+  background: #898989;
+}
+#financialRatios .main-context-box #financialratio-table div.head div.projected {
+  background: #1ba6dd;
+}
+#financialRatios .main-context-box #financialratio-table div.head div:first-child {
+  text-transform: uppercase;
+}
+#financialRatios .main-context-box #financialratio-table div.section-break {
+  background: #ffffff;
+  height: 10px;
+}
+#financialRatios .main-context-box #financialratio-table div.section-head {
+  background: #6d6d6d;
+  margin-top: 10px;
+}
+#financialRatios .main-context-box #financialratio-table div.section-head div {
+  color: #ffffff;
+}
+#financialRatios .main-context-box #financialratio-table div.section-head div:first-child {
+  text-transform: uppercase;
+}
+#financialRatios .main-context-box #financialratio-table div > div:first-child {
+  font-family: 'ITC Avant Garde Gothic Std Demi', Arial, sans-serif;
+  padding-left: 15px;
+  text-align: left;
+}
