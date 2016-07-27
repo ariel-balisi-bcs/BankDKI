@@ -6,21 +6,20 @@ using System.Web.Mvc;
 
 namespace BankDKI.Controllers
 {
-    public class SensitivityController : Controller
+    public class FinancialStatementsController : Controller
     {
         //
-        // GET: /Sensitivity/
+        // GET: /FinancialStatements/
 
-        public ActionResult Index()
+        public ActionResult StandAlone()
         {
             return View();
         }
 
-        
         //
-        // GET: /Sensitivity/
+        // GET: /FinancialStatements/
 
-        public ActionResult SensitivityAndScenarioAnalytics()
+        public ActionResult Combination()
         {
             return View();
         }

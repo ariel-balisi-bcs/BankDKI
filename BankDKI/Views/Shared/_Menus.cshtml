@@ -1,5 +1,5 @@
 ﻿<nav class="@ViewBag.Active">
-    <ul>
+    @*<ul>
         <li class="financialInfo">
             @Html.ActionLink("Financial Information", "Information", "Financial")
         </li>
@@ -17,6 +17,25 @@
         </li>
         <li class="industryComparison">
             @Html.ActionLink("Industry Comparison", "Index", "IndustryComparison")
+        </li>
+    </ul>*@
+
+    @*New Menus*@
+    <ul class="dynamic">
+        <li class="fsStandAlone">
+            @Html.ActionLink("Financial Statements Stand Alone", "StandAlone", "FinancialStatements")
+        </li>
+        <li class="fsCombination">
+            @Html.ActionLink("Financial Statements Combination", "Combination", "FinancialStatements")
+        </li>
+        <li class="scfDirectMethod">
+            @Html.ActionLink("Statements of Cash Flows Direct Method", "DirectMethod", "CashFlows")
+        </li>
+        <li class="financialRatios">
+            @Html.ActionLink("Financial Ratios", "Ratios", "Financial")
+        </li>
+        <li class="sensitivityScenarioAnalytics">
+            @Html.ActionLink("Sensitivity And Scenario Analytics", "SensitivityAndScenarioAnalytics", "Sensitivity")
         </li>
     </ul>
     <div class="clearfix"></div>

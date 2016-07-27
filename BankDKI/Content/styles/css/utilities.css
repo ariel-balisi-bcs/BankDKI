@@ -49,6 +49,17 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+nav ul.dynamic li {
+  width: 19.9%;
+  display: table;
+}
+nav ul.dynamic li a {
+  line-height: 20px;
+  height: 68px;
+  vertical-align: middle;
+  display: table-cell;
+  width: 100%;
+}
 nav ul li {
   width: 16.59%;
   list-style: none;

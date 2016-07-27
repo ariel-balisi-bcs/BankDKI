@@ -71,6 +71,21 @@ namespace BankDKI
             bundles.Add(new StyleBundle("~/css/industryComparison").Include(
                         "~/Content/styles/css/industryComparison.css"));
 
+            bundles.Add(new StyleBundle("~/css/fsStandAlone").Include(
+                        "~/Content/styles/css/fsStandAlone.css"));
+
+            bundles.Add(new StyleBundle("~/css/fsCombination").Include(
+                        "~/Content/styles/css/fsCombination.css"));
+
+            bundles.Add(new StyleBundle("~/css/scfDirectMethod").Include(
+                        "~/Content/styles/css/scfDirectMethod.css"));
+
+            bundles.Add(new StyleBundle("~/css/financialRatios").Include(
+                        "~/Content/styles/css/financialRatios.css"));
+
+            bundles.Add(new StyleBundle("~/css/sensitivityScenarioAnalytics").Include(
+                        "~/Content/styles/css/sensitivityScenarioAnalytics.css"));
+
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",

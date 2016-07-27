@@ -24,5 +24,13 @@ namespace BankDKI.Controllers
             return View();
         }
 
+        //
+        // GET: /Financial/
+
+        public ActionResult Ratios()
+        {
+            return View();
+        }
+
     }
 }
