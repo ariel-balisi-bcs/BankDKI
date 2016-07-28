@@ -2,6 +2,85 @@
 
 #creditAnalysis{
 
+    .ca-heading {
+        background:#1BA6DD;
+        padding:20px;
+
+        h3 {
+            font-size:14px;
+            color:#fff;
+        }
+    }
+
+    .ca-content {
+        font-size:12px;
+
+        .table-striped>tbody>tr:nth-of-type(odd) {
+            background:#e4e4e4;
+        }
+
+        .table-striped>tbody>tr:nth-of-type(even) {
+            background:#eeeeee;
+        }
+
+        table {
+            width:100%;
+            tr {
+                th {
+                    background:#898989;
+                    text-align:center;
+                    color:#fff;
+                    padding:6px 0;
+                }
+
+                td:first-child {
+                    width:190px;
+                }
+                td:nth-child(2){
+                    width:200px;
+                }
+                td:last-child{
+                    width:160px;
+                }
+
+                td {
+                    text-align:center;
+                    padding:6px 0;
+
+                    ul {
+                        list-style:none;
+                        list-style-type:none;
+                        padding:0;
+                        margin:0;
+                    }
+                }
+            }
+        }
+    }
+
+    .ca-processing-buttons {
+        text-align:center;
+        margin:20px 0;
+
+        button {
+            display:inline-block;
+            background:#2aae74;
+            border:1px solid #2aae74;
+            border-radius:3px;
+            text-transform:uppercase;
+            padding:12px;
+            font-size:14px;
+            color:#fff;
+            width:150px;
+            margin:0 6px;
+        }
+
+        button:disabled {
+            background:#75c9a5;
+            border:1px solid #75c9a5;
+        }
+    }
+
     .applied-loan-amount-container{
         height:80px;
         .applied-loan{

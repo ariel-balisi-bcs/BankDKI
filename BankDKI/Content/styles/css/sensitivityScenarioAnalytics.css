@@ -1,4 +1,97 @@
-﻿#sensitivityScenarioAnalytics .applied-loan-amount-container {
+﻿#sensitivityScenarioAnalytics p {
+  font-size: 12px;
+}
+#sensitivityScenarioAnalytics .panel-group .panel {
+  border: 0;
+}
+#sensitivityScenarioAnalytics .panel-group .panel-heading {
+  background: #727272;
+  color: #fff;
+  padding: 20px;
+}
+#sensitivityScenarioAnalytics .panel-group .panel-body {
+  padding: 3px 0 0 0;
+}
+#sensitivityScenarioAnalytics .ssa-analysis.table-bordered > tbody > tr > td,
+#sensitivityScenarioAnalytics .ssa-analysis.table-bordered > tbody > tr > th,
+#sensitivityScenarioAnalytics .ssa-analysis.table-bordered > tfoot > tr > td,
+#sensitivityScenarioAnalytics .ssa-analysis.table-bordered > tfoot > tr > th,
+#sensitivityScenarioAnalytics .ssa-analysis.table-bordered > thead > tr > td,
+#sensitivityScenarioAnalytics .ssa-analysis.table-bordered > thead > tr > th {
+  border: 1px solid #fefefe;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr {
+  font-size: 12px;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr td {
+  text-align: center;
+  background: #ededed;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr th {
+  font-size: 14px;
+  padding: 24px 0;
+  text-align: center;
+  color: #fff;
+  background: #1BA6DD;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr th:first-child {
+  background: #898989;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+2) td table {
+  width: 100%;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+2) td table tr td:first-child {
+  padding-left: 6px;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+2) td table tr td:first-child,
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+2) td table tr td:nth-child(2) {
+  width: 115px;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+2) td table tr td:last-child {
+  width: 20px;
+  padding-right: 6px;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+6) td table {
+  width: 100%;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+6) td table tr td:first-child {
+  width: 145px;
+  padding-left: 6px;
+}
+#sensitivityScenarioAnalytics .ssa-analysis tr:nth-child(n+6) td table tr td:last-child {
+  width: 20px;
+  padding-right: 6px;
+}
+#sensitivityScenarioAnalytics .ssa-scenarios {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+#sensitivityScenarioAnalytics .ssa-scenarios li {
+  display: inline-block;
+}
+#sensitivityScenarioAnalytics .ssa-scenarios li button {
+  background: #fff;
+  padding: 19px;
+  font-size: 14px;
+  border: 1px solid #1BA6DD;
+  width: 201px;
+}
+#sensitivityScenarioAnalytics .ssa-scenarios li button span {
+  color: #1BA6DD;
+  font-weight: bold;
+}
+#sensitivityScenarioAnalytics .ssa-scenarios li:first-child {
+  width: 311px;
+  background: #898989;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+#sensitivityScenarioAnalytics .applied-loan-amount-container {
   height: 80px;
 }
 #sensitivityScenarioAnalytics .applied-loan-amount-container .applied-loan {

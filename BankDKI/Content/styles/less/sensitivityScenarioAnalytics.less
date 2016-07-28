@@ -2,6 +2,127 @@
 
 #sensitivityScenarioAnalytics{
 
+    p {
+        font-size:12px;
+    }
+
+    .panel-group {
+        .panel {
+            border:0;
+        }
+
+        .panel-heading {
+            background:#727272;
+            color:#fff;
+            padding:20px;
+        }
+
+        .panel-body {
+            padding:3px 0 0 0;
+        }
+    }
+
+    .ssa-analysis.table-bordered>tbody>tr>td, .ssa-analysis.table-bordered>tbody>tr>th, .ssa-analysis.table-bordered>tfoot>tr>td, .ssa-analysis.table-bordered>tfoot>tr>th, .ssa-analysis.table-bordered>thead>tr>td, .ssa-analysis.table-bordered>thead>tr>th {
+        border:1px solid #fefefe;
+    }
+
+    .ssa-analysis {
+
+        tr {
+            font-size:12px;
+            
+            td {
+                text-align:center;
+                background:#ededed;
+            }
+
+            th {
+                font-size:14px;
+                padding:24px 0;
+                text-align:center;
+                color:#fff;
+                background:#1BA6DD;
+            }
+
+            th:first-child {
+                background:#898989;
+            }
+        }
+
+        tr:nth-child(n+2) {
+            td {
+                table {
+                    width:100%;
+                    tr {
+                        td:first-child {
+                            padding-left:6px;
+                        }
+                        td:first-child, td:nth-child(2){
+                            width:115px;
+                        }
+                        td:last-child{
+                            width:20px;
+                            padding-right:6px;
+                        }
+                    }
+                }
+            }
+        }
+
+        tr:nth-child(n+6) {
+            td {
+                table {
+                    width:100%;
+                    tr {
+                        td:first-child{
+                            width:145px;
+                            padding-left:6px;
+                        }
+                        td:last-child{
+                            width:20px;
+                            padding-right:6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ssa-scenarios {
+        list-style:none;
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        margin-top:3px;
+
+            li {
+                display:inline-block;
+
+                button {
+                    background: #fff;
+                    padding: 19px;
+                    font-size: 14px;
+                    border: 1px solid #1BA6DD;
+                    width:201px;
+
+                    span {
+                        color:#1BA6DD;
+                        font-weight:bold;
+                    }
+                }
+            }
+
+            li:first-child {
+                width: 311px;
+                background: #898989;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+            }
+    }
+
+
     .applied-loan-amount-container{
         height:80px;
         .applied-loan{
