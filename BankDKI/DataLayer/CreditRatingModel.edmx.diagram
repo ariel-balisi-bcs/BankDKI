@@ -7,6 +7,19 @@
       <Diagram DiagramId="15c66864139a484c8a42a50e6c380033" Name="Diagram1">
         <EntityTypeShape EntityType="DKICreditRatingModel.CreditRatingHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DKICreditRatingModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblDescription" Width="1.5" PointX="3.75" PointY="4.375" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblGroup" Width="1.5" PointX="3.75" PointY="7.375" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblHistoricalFinancialStatement" Width="1.5" PointX="6" PointY="4" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblMADescription" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblMAGroup" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblMainAssumption" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblOADescription" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblOAGroup" Width="1.5" PointX="5.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.tblOAType" Width="1.5" PointX="7.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.database_firewall_rules" Width="1.5" PointX="9.75" PointY="0.75" />
+        <AssociationConnector Association="DKICreditRatingModel.FK_tblHistoricalFinancialStatement_tblDescription" />
+        <AssociationConnector Association="DKICreditRatingModel.FK_tblHistoricalFinancialStatement_tblGroup" />
+        <EntityTypeShape EntityType="DKICreditRatingModel.vwAuditedFS_SA_Summation" Width="1.5" PointX="8.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

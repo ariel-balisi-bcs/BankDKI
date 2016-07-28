@@ -27,5 +27,16 @@ namespace BankDKI.DataLayer
     
         public DbSet<CreditRatingHistory> CreditRatingHistories { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<tblDescription> tblDescriptions { get; set; }
+        public DbSet<tblGroup> tblGroups { get; set; }
+        public DbSet<tblHistoricalFinancialStatement> tblHistoricalFinancialStatements { get; set; }
+        public DbSet<tblMADescription> tblMADescriptions { get; set; }
+        public DbSet<tblMAGroup> tblMAGroups { get; set; }
+        public DbSet<tblMainAssumption> tblMainAssumptions { get; set; }
+        public DbSet<tblOADescription> tblOADescriptions { get; set; }
+        public DbSet<tblOAGroup> tblOAGroups { get; set; }
+        public DbSet<tblOAType> tblOATypes { get; set; }
+        public DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public DbSet<vwAuditedFS_SA_Summation> vwAuditedFS_SA_Summation { get; set; }
     }
 }

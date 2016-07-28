@@ -169,13 +169,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CreditRatingModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DataLayer\database_firewall_rules.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblDescription.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblGroup.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblHistoricalFinancialStatement.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblMADescription.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblMAGroup.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblMainAssumption.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblOADescription.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblOAGroup.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\tblOAType.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer\User.cs">
+      <DependentUpon>CreditRatingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\vwAuditedFS_SA_Summation.cs">
       <DependentUpon>CreditRatingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CreditRatingHistoryModel.cs" />
+    <Compile Include="Models\FinancialStatementModel.cs" />
+    <Compile Include="Models\FinancialStatementStandAloneModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
