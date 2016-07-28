@@ -1,84 +1,93 @@
 ﻿@import 'variable.less';
 
-#financialRatios{
+#financialRatios {
 
-    .main-context-box {
-        margin-top: 50px;
-		margin-bottom: 30px;
+    h2 { margin-bottom: 40px; text-transform: uppercase; }
 
-        .table-heading {
-            font-size: 16px;
-            margin: 10px 0;
+    p { margin-bottom: 10px; }
+
+    #financialratio-table {
+        border-collapse: collapse;
+		display: table;
+		font-family: @bookFontFamily;
+		font-size: 14px;
+		text-align: center;
+
+        div {
+            text-align: right;
+            padding-right: 7px;
+
+            &.head {
+                .labels{
+                    background:#727272;
+
+                    div{
+                        line-height:normal;
+                        text-align: left;
+                    }
+                }
+
+                .audited{
+                    background:#9E9E9E;
+
+                    div:first-child{
+                        font-size:15px;
+                    }
+
+                    div:last-child{
+                        font-family:@mediumFontFamily;
+                        font-size:12px;
+                    }
+                }
+
+                .proj{
+                    background:#1BA6DD;
+
+                    div:first-child{
+                        font-size:15px;
+                    }
+
+                    div:last-child{
+                        font-family:@mediumFontFamily;
+                        font-size:12px;
+                    }
+                }
+
+                > div{
+                    &:not(.labels){
+                        width:100px;
+                        text-align:right;
+
+                        div{
+                            line-height:normal;
+                        }
+                    }
+                }
+            }
+
+            &.section-break {
+                background: @white;
+                height: 10px;
+            }
+
+            &.section-head {
+                background: @tableTextColor;
+                margin-top: 10px;
+
+                div {
+                    color: @white;
+
+                    &:first-child {
+                        text-transform: uppercase;
+                    }
+                }
+            }
         }
 
-        #financialratio-table {
-            border-collapse: collapse;
-			display: table;
-			font-family: @bookFontFamily;
-			font-size: 14px;
-			text-align: center;
-
-            div {
-                text-align: right;
-                padding-right: 7px;
-
-                &.head {
-                    div {
-                        background: @tableTextColor;
-                        border: 1px solid #ffffff;
-                        color: @white;
-                        font-size: 16px;
-                        line-height: 18px;
-                        padding: 7px;
-                        text-align: right;
-                        text-transform: uppercase;
-
-                        span {
-                            display: block;
-                            font-family: @bookFontFamily;
-                            font-size: 12px;
-                            text-transform: capitalize;
-                        }
-
-                        &.audited {
-                            background: @contentHeaderBg;
-                        }
-
-                        &.projected {
-                            background: @blue;
-                        }
-
-                        &:first-child {
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-
-                &.section-break {
-                    background: @white;
-                    height: 10px;
-                }
-
-                &.section-head {
-                    background: @tableTextColor;
-                    margin-top: 10px;
-
-                    div {
-                        color: @white;
-
-                        &:first-child {
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-
-                & > div:first-child {
-                        font-family: @baseFontFamily;
-                        padding-left: 15px;
-                        text-align: left;
-                }
-
-            }
+        & > div > div:first-child {
+                font-family: @baseFontFamily;
+                padding-left: 15px;
+                text-align: left;
         }
     }
 }
