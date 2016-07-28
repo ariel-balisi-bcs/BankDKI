@@ -1,1 +1,119 @@
-﻿
+﻿#scfDirectMethod h2 {
+  margin-bottom: 40px;
+}
+#scfDirectMethod p {
+  margin-bottom: 10px;
+}
+#scfDirectMethod #accordion .panel {
+  margin-bottom: 0;
+}
+#scfDirectMethod #accordion .panel .panel-heading {
+  padding: 0;
+  border-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-bottom: 8px;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title > div {
+  cursor: default;
+  position: relative;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title > div:before {
+  content: '-';
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -12px;
+  font-size: 20px;
+  box-shadow: 1px 1px 1px #000000;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title > div.collapsed:before {
+  content: '+';
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .labels {
+  background: #727272;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .labels div {
+  line-height: normal;
+  margin-left: 50px;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .audited {
+  background: #9E9E9E;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .audited div:first-child {
+  font-size: 15px;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .audited div:last-child {
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 12px;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .proj {
+  background: #1BA6DD;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .proj div:first-child {
+  font-size: 15px;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head .proj div:last-child {
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 12px;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head > div:not(.labels) {
+  width: 100px;
+  text-align: right;
+}
+#scfDirectMethod #accordion .panel .panel-heading .panel-title .table .head > div:not(.labels) div {
+  line-height: normal;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table {
+  margin-top: 40px;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div div:not(.labels) {
+  text-align: right;
+  width: 100px;
+  font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+  font-size: 12px;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div div.labels {
+  padding-left: 10px;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div div.labels span {
+  text-transform: uppercase;
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 14px;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.total {
+  background: #727272;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.total div {
+  color: #ffffff;
+  font-family: 'ITC Avant Garde Gothic Std Medium', Arial, sans-serif;
+  font-size: 12px;
+  border-top: 8px solid #ffffff;
+  border-bottom: 8px solid #ffffff;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.total + .total div {
+  border-top: 0;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.section-heading {
+  background: #ffffff;
+  font-size: 15px;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.spacer {
+  background: none;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.spacer div {
+  background: none;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.spacer.spacer-heading div {
+  line-height: 0;
+}
+#scfDirectMethod #accordion .panel .panel-collapse .table div.marginBottom {
+  margin-bottom: 20px;
+}
