@@ -79,6 +79,7 @@
                     margin:12px 24px;
 
                     li:nth-child(2) {
+                        clear:both;
                         .ca-graph-col-2 {
                             .progress {
                                 .progress-bar {
@@ -92,14 +93,18 @@
                         display:block;
                         text-align:left;
 
-                        .ca-graph-col-1 {
+                        .ca-graph-col-1, .ca-graph-col-3 {
                             float:left;
-                            width:30%;
+                            width:15%;
                         }
 
                         .ca-graph-col-2 {
                             float:left;
                             width:70%;
+                        }
+
+                        .ca-graph-col-3 {
+                            padding-left:6px;
                         }
 
                         .ca-total-result-number {

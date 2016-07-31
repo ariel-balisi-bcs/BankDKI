@@ -59,6 +59,9 @@
 #creditAnalysis .ca-content .ca-graph .ca-graph-results ul {
   margin: 12px 24px;
 }
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li:nth-child(2) {
+  clear: both;
+}
 #creditAnalysis .ca-content .ca-graph .ca-graph-results ul li:nth-child(2) .ca-graph-col-2 .progress .progress-bar {
   background: #fda402;
 }
@@ -66,13 +69,17 @@
   display: block;
   text-align: left;
 }
-#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-graph-col-1 {
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-graph-col-1,
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-graph-col-3 {
   float: left;
-  width: 30%;
+  width: 15%;
 }
 #creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-graph-col-2 {
   float: left;
   width: 70%;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-graph-col-3 {
+  padding-left: 6px;
 }
 #creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-total-result-number {
   clear: both;
