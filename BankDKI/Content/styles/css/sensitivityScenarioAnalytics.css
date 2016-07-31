@@ -91,6 +91,9 @@
   font-size: 14px;
   color: #fff;
 }
+#sensitivityScenarioAnalytics .ssa-scenarios li:first-child .radio {
+  display: inline;
+}
 #sensitivityScenarioAnalytics .applied-loan-amount-container {
   height: 80px;
 }
