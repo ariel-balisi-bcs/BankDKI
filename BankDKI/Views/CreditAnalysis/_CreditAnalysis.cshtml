@@ -257,6 +257,40 @@
     </div>
 </div>
 <div class="col-md-12 ca-processing-buttons">
-    <button>Submit</button>
-    <button disabled>Export</button>
+    <button data-toggle="modal" data-target="#modalSubmit">Submit</button>
+    <button id="btnExport" disabled="disabled" data-toggle="modal" data-target="#modalExport">Export</button>
+</div>
+
+<div id="modalExport" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Would you like to export the report?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btnYes" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-default btnNo" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalSubmit" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Data successfully save!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btnOk" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
 </div>

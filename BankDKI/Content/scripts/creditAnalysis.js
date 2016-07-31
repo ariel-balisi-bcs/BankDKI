@@ -72,6 +72,13 @@
             });
         });
 
+        var btnOk = $(".btnOk");
+        $(btnOk)
+            .on("click",
+                function() {
+                    $("#btnExport").removeAttr("disabled");
+                });
+
         //btnViewCreditHistory.tooltip();
         $('[data-toggle="tooltip"]').tooltip();
     });
