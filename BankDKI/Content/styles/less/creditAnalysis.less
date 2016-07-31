@@ -56,6 +56,81 @@
                 }
             }
         }
+
+        .ca-graph {
+            border:1px solid #eee;
+            margin-top:12px;
+
+            tr th {
+                padding:20px 0;
+                font-size:14px;
+            }
+
+            tr:nth-child(2){
+                td:nth-child(2){
+                    border-left:1px solid #eee;
+                    font-size:50px;
+                }
+            }
+
+            .ca-graph-results {
+                ul {
+                    margin:12px 24px;
+
+                    li:nth-child(2) {
+                        .ca-graph-col-2 {
+                            .progress {
+                                .progress-bar {
+                                    background:#fda402;
+                                }
+                            }
+                        }
+                    }
+
+                    li {
+                        display:block;
+                        text-align:left;
+
+                        .ca-graph-col-1 {
+                            float:left;
+                            width:30%;
+                        }
+
+                        .ca-graph-col-2 {
+                            float:left;
+                            width:70%;
+                        }
+
+                        .ca-total-result-number {
+                            clear:both;
+                            text-align:left;
+                            font-size:14px;
+
+                            span {
+                                display:block;
+                                font-size:16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ca-bottom-table {
+            border:1px solid #eee;
+            margin-top:12px;
+            tr td {
+                text-align:left;
+                padding:20px;
+            }
+            .ca-total-result-number {
+                text-align:left;
+                font-size:14px;
+                span {
+                    display:block;
+                    font-size:16px;
+                }
+            }
+        }
     }
 
     .ca-processing-buttons {

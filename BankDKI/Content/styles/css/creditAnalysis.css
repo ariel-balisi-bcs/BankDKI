@@ -43,6 +43,61 @@
   padding: 0;
   margin: 0;
 }
+#creditAnalysis .ca-content .ca-graph {
+  border: 1px solid #eee;
+  margin-top: 12px;
+}
+#creditAnalysis .ca-content .ca-graph tr th {
+  padding: 20px 0;
+  font-size: 14px;
+}
+#creditAnalysis .ca-content .ca-graph tr:nth-child(2) td:nth-child(2) {
+  border-left: 1px solid #eee;
+  font-size: 50px;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul {
+  margin: 12px 24px;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li:nth-child(2) .ca-graph-col-2 .progress .progress-bar {
+  background: #fda402;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li {
+  display: block;
+  text-align: left;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-graph-col-1 {
+  float: left;
+  width: 30%;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-graph-col-2 {
+  float: left;
+  width: 70%;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-total-result-number {
+  clear: both;
+  text-align: left;
+  font-size: 14px;
+}
+#creditAnalysis .ca-content .ca-graph .ca-graph-results ul li .ca-total-result-number span {
+  display: block;
+  font-size: 16px;
+}
+#creditAnalysis .ca-content .ca-bottom-table {
+  border: 1px solid #eee;
+  margin-top: 12px;
+}
+#creditAnalysis .ca-content .ca-bottom-table tr td {
+  text-align: left;
+  padding: 20px;
+}
+#creditAnalysis .ca-content .ca-bottom-table .ca-total-result-number {
+  text-align: left;
+  font-size: 14px;
+}
+#creditAnalysis .ca-content .ca-bottom-table .ca-total-result-number span {
+  display: block;
+  font-size: 16px;
+}
 #creditAnalysis .ca-processing-buttons {
   text-align: center;
   margin: 20px 0;
