@@ -1,21 +1,6 @@
-﻿@using System.Linq
-@using ModelBinderAttribute = System.Web.Http.ModelBinding.ModelBinderAttribute
-@model BankDKI.Models.FinancialStatementStandAloneModel
-@{
+﻿@{
     ViewBag.Title = "Bank DKI - Financial Statements Stand Alone";
     ViewBag.Active = "fsStandAlone";
-    var currAssetsDescIds = Model.CurrentAssets.Select(x => x.Id).Distinct().ToList();
-    var fixedAssetIds = Model.FixedAssets.Select(x => x.Id).Distinct().ToList();
-    var nonCurrAssetIds = Model.NonCurrentAssets.Select(x => x.Id).Distinct().ToList();
-    var curLiabilitiesIds = Model.CurrentLiabilities.Select(x => x.Id).Distinct().ToList();
-    var nonCurLiabilitiesIds = Model.NonCurrentLiabilities.Select(x => x.Id).Distinct().ToList();
-    var equitiesIds = Model.Equities.Select(x => x.Id).Distinct().ToList();
-    var grossProfitIds = Model.GrossProfit.Select(x => x.Id).Distinct().ToList();
-    var netOperatingProfitIds = Model.NetOperatingProfit.Select(x => x.Id).Distinct().ToList();
-    var profitLossIncomeTaxIds = Model.ProfitBeforeIncomeTax.Select(x => x.Id).Distinct().ToList();
-    var incomeForPeriodIds = Model.IncomeTaxForPeriod.Select(x => x.Id).Distinct().ToList();
-    var totalComprehensiveIncomeIds = Model.TotalComprehensiveIncome.Select(x => x.Id).Distinct().ToList();
-    var equityIncreaseIds = Model.EquityIncrease.Select(x => x.Id).Distinct().ToList();
 }
 
 @section header
@@ -80,129 +65,395 @@
                     </div>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="table alternate">
-                @foreach (var curAssetsId in currAssetsDescIds)
-                {
-                    var assetsId = curAssetsId;
-                    var desc = Model.CurrentAssets.First(x => x.Id == assetsId).Description;
-                    <div>
-                        <div class="labels">@desc</div>
-
-                        @{
-                            var auditedAmt = Model.CurrentAssets.Where(x => x.Id == assetsId);
-                        }
-                        @foreach (var amt in auditedAmt)
-                        {
-                            <div class="audited">@amt.Amount</div>
-                        }
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                    </div>
-                    if (assetsId == 3 || assetsId == 6)
-                    {
+                    <div class="table alternate">
+                        <div>
+                            <div class="labels">Cash on hand & in banks</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Excess cash</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Minimum cash balance</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Time deposits</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Short term investments</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
                         <div class="spacer">
                             <div class="labels">&nbsp;</div>
                         </div>
-                    }
-                }
-                <div class="total">
-                    <div class="labels">TOTAL CURRENT ASSETS</div>
-                    <div class="audited">@Model.CurrentAssets.Where(x=>x.YearAuditedProjected.Year==2013).Sum(x=>x.Amount)</div>
-                    <div class="audited">@Model.CurrentAssets.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.CurrentAssets.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                <div class="spacer">
-                    <div class="labels">&nbsp;</div>
-                </div>
-
-                @foreach (var fixedAssetId in fixedAssetIds)
-                {
-                    var assetsId = fixedAssetId;
-                    var desc = Model.FixedAssets.First(x => x.Id == assetsId).Description;
-                    <div>
-                        <div class="labels">@desc</div>
-
-                        @{
-                            var auditedAmt = Model.FixedAssets.Where(x => x.Id == assetsId);
-                        }
-                        @foreach (var amt in auditedAmt)
-                        {
-                            <div class="audited">@amt.Amount</div>
-                        }
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                    </div>
-                }
-                <div class="total">
-                    <div class="labels">TOTAL FIXED ASSETS</div>
-                    <div class="audited">@Model.FixedAssets.Where(x=>x.YearAuditedProjected.Year==2013).Sum(x=>x.Amount)</div>
-                    <div class="audited">@Model.FixedAssets.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.FixedAssets.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                    <div class="spacer">
-                        <div class="labels">&nbsp;</div>
-                    </div>
-                    @foreach (var nonCurAssetId in nonCurrAssetIds)
-                    {
-                        var assetsId = nonCurAssetId;
-                        var desc = Model.NonCurrentAssets.First(x => x.Id == assetsId).Description;
                         <div>
-                            <div class="labels">@desc</div>
-
-                            @{
-                                var auditedAmt = Model.NonCurrentAssets.Where(x => x.Id == assetsId);
-                            }
-                            @foreach (var amt in auditedAmt)
-                            {
-                                <div class="audited">@amt.Amount</div>
-                            }
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
+                            <div class="labels">Trade receivables</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
                         </div>
-                    }
-                <div class="total">
-                    <div class="labels">TOTAL NON CURRENT ASSETS</div>
-                    <div class="audited">@Model.NonCurrentAssets.Where(x=>x.YearAuditedProjected.Year==2013).Sum(x=>x.Amount)</div>
-                    <div class="audited">@Model.NonCurrentAssets.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.NonCurrentAssets.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                <div class="total">
-                    <div class="labels">TOTAL ASSETS</div>
-                    @foreach (var amt in Model.TotalAssets)
-                    {
-                        <div class="audited">@amt</div>
-                    }
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                </div>
+                        <div>
+                            <div class="labels">(Provision for doubtful receivables)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Net trade receivables</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="spacer">
+                            <div class="labels">&nbsp;</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other receivables</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Net inventory</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Advances on purchases</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Prepaid expenses</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Prepaid taxes</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Sundry current assets</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">TOTAL CURRENT ASSETS</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="spacer">
+                            <div class="labels">&nbsp;</div>
+                        </div>
+                        <div>
+                            <div class="labels">Land</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Buildings and improvements</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Machinery and equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Transportation equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Furnitures, fixtures and office equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Total Fixed Assets</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">(Accumulated depreciation Land)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">(Accumulated depreciation Buildings and improvements)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">(Accumulated depreciation Machinery and equipment)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">(Accumulated depreciation Transportation equipment)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">(Accumulated depreciation Furnitures, fixtures and office equipment)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">(Accumulated depreciation Total Fixed Assets)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Construction in progress</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">TOTAL FIXED ASSETS</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="spacer">
+                            <div class="labels">&nbsp;</div>
+                        </div>
+                        <div>
+                            <div class="labels">Long term investments</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Advance on purchases</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Sundry nca</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">TOTAL NON CURRENT ASSETS</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">TOTAL ASSETS</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="panel">
@@ -252,111 +503,418 @@
                     </div>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="table alternate">
-                @foreach (var curLiabilitiesId in curLiabilitiesIds)
-                {
-                    var assetsId = curLiabilitiesId;
-                    var desc = Model.CurrentLiabilities.First(x => x.Id == assetsId).Description;
-                    <div>
-                        <div class="labels">@desc</div>
-
-                        @{
-                                var auditedAmt = Model.CurrentLiabilities.Where(x => x.Id == assetsId);
-                        }
-                        @foreach (var amt in auditedAmt)
-                        {
-                            <div class="audited">@amt.Amount</div>
-                        }
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                    </div>
-                }
-                    <div class="total">
-                        <div class="labels">TOTAL CURRENT LIABILITIES</div>
-                        <div class="audited">@Model.CurrentLiabilities.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                        <div class="audited">@Model.CurrentLiabilities.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                        <div class="audited">@Model.CurrentLiabilities.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
+                    <div class="table alternate">
+                        <div>
+                            <div class="labels">Std - bank (existing)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
                         </div>
-                        @foreach (var nonCurLiabilitiesId in nonCurLiabilitiesIds)
-                        {
-                            var assetsId = nonCurLiabilitiesId;
-                            var desc = Model.NonCurrentLiabilities.First(x => x.Id == assetsId).Description;
-                            <div>
-                                <div class="labels">@desc</div>
-
-                                @{
-                                    var auditedAmt = Model.NonCurrentLiabilities.Where(x => x.Id == assetsId);
-                                }
-                                @foreach (var amt in auditedAmt)
-                                {
-                                    <div class="audited">@amt.Amount</div>
-                                }
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                            </div>
-                        }
+                        <div>
+                            <div class="labels">Std - bank (existing ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Std - bank (new)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Std - bank (new ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">New financing needs - unallocated</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Current portion of long term liabilities:</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (existing)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (existing ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other liabilities</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (new)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (new ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other liabilities (new)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Current portion of ltd already overdue</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Trade payables</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Accrued expenses</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Tax payables</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Sundry cl</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">TOTAL CURRENT LIABILITIES</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Long term debts:</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (existing)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (existing ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other liabilities</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (new)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Banks (new ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other liabilities (new)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Deferred taxes</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Sundry ncl</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
                         <div class="total">
                             <div class="labels">TOTAL NON-CURRENT LIABILITIES</div>
-                            <div class="audited">@Model.NonCurrentLiabilities.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                            <div class="audited">@Model.NonCurrentLiabilities.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                            <div class="audited">@Model.NonCurrentLiabilities.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
                         </div>
                         <div class="total">
                             <div class="labels">TOTAL LIABILITIES</div>
-                            @foreach (var amt in Model.TotalLiabilities)
-                            {
-                                <div class="audited">@amt</div>
-                            }
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Shares issued</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Additional Paid in Capital</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other reserves</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Retained earnings:</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Previous earnings</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Current earnings</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other equity components</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="spacer">
+                            <div class="labels">&nbsp;</div>
+                        </div>
+                        <div>
+                            <div class="labels">Non-controlling interest</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
                         </div>
 
-                        @foreach (var equitiesId in equitiesIds)
-                        {
-                            var assetsId = equitiesId;
-                            var desc = Model.Equities.First(x => x.Id == assetsId).Description;
-                            <div>
-                                <div class="labels">@desc</div>
-
-                                @{
-                                    var auditedAmt = Model.Equities.Where(x => x.Id == assetsId);
-                                }
-                                @foreach (var amt in auditedAmt)
-                                {
-                                    <div class="audited">@amt.Amount</div>
-                                }
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                                <div class="proj">0</div>
-                            </div>
-                            if (assetsId == 48)
-                            {
-                                <div class="spacer">
-                                    <div class="labels">&nbsp;</div>
-                                </div>
-                            }
-                        }
                     </div>
                 </div>
             </div>
@@ -407,211 +965,509 @@
                     </div>
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="table alternate">
-                @foreach (var grossProfitId in grossProfitIds)
-                {
-                    var assetsId = grossProfitId;
-                    var desc = Model.GrossProfit.First(x => x.Id == assetsId).Description;
-                    <div>
-                        <div class="labels">@desc</div>
-
-                        @{
-                    var auditedAmt = Model.GrossProfit.Where(x => x.Id == assetsId);
-                        }
-                        @foreach (var amt in auditedAmt)
-                        {
-                            <div class="audited">@amt.Amount</div>
-                        }
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
-                        <div class="proj">0</div>
+                    <div class="table alternate">
+                        <div>
+                            <div class="labels">Net Sales</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Cost of goods sold</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Depreciation expense</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Buildings and improvements</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Machinery and equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Transportation equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Furnitures, fixtures and office equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Total Fixed Assets</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Amortisation expense</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">GROSS PROFIT</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Selling, general & adm expense</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Depreciation expense</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Buildings and improvements</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Machinery and equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Transportation equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Furnitures, fixtures and office equipment</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Total Fixed Assets</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Amortisation expense</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">NET OPERATING PROFIT  (NOP)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Interest expense (existing)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Interest expense (existing ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Interest expense (new)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Interest expense (new ( ))</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Provision for doubtfull receivables</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Interest income</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Fx gains (losses)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other income (expenses)</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Gain on disposal of fixed assets</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Share of results of associates</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Others</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">PROFIT (LOSS) BEFORE INCOME TAX</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Income tax - Current</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Income tax - Deferred</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">INCOME FOR THE PERIOD</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other comprehensive income (loss) for the year, net of tax</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">TOTAL COMPREHENSIVE INCOME (LOSS) FOR THE PERIOD</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels"><span class="labelText">INCOME FOR THE PERIOD ATTRIBUTABLE TO:</span></div>
+                            <div class="audited"></div>
+                            <div class="audited"></div>
+                            <div class="audited"></div>
+                            <div class="proj"></div>
+                            <div class="proj"></div>
+                            <div class="proj"></div>
+                            <div class="proj"></div>
+                            <div class="proj"></div>
+                        </div>
+                        <div>
+                            <div class="labels">Equity holders of the parent entity</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Non-controlling interest</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels"><strong>Total</strong></div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="spacer">
+                            <div class="labels">&nbsp;</div>
+                        </div>
+                        <div>
+                            <div class="labels"><span class="labelText">COMPREHENSIVE INCOME FOR THE PERIOD ATTRIBUTABLE TO:</span></div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Other adjustments</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="spacer">
+                            <div class="labels">&nbsp;</div>
+                        </div>
+                        <div>
+                            <div class="labels">Chg in Shares issued</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div>
+                            <div class="labels">Chg in Additional Paid in Capital</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
+                        <div class="total">
+                            <div class="labels">EQUITY INCREASE</div>
+                            <div class="audited">345,958,090</div>
+                            <div class="audited">108,625,610</div>
+                            <div class="audited">166,649,266</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                            <div class="proj">2,252,763,220</div>
+                        </div>
                     </div>
-                }
-                <div class="total">
-                    <div class="labels">GROSS PROFIT</div>
-                    <div class="audited">@Model.GrossProfit.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.GrossProfit.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.GrossProfit.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                    @foreach (var netProfitId in netOperatingProfitIds)
-                    {
-                        var assetsId = netProfitId;
-                        var desc = Model.NetOperatingProfit.First(x => x.Id == assetsId).Description;
-                        <div>
-                            <div class="labels">@desc</div>
-
-                            @{
-                        var auditedAmt = Model.NetOperatingProfit.Where(x => x.Id == assetsId);
-                            }
-                            @foreach (var amt in auditedAmt)
-                            {
-                                <div class="audited">@amt.Amount</div>
-                            }
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                        </div>
-                    }
-                <div class="total">
-                    <div class="labels">NET OPERATING PROFIT (NOP)</div>
-                    <div class="audited">@Model.NetOperatingProfit.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.NetOperatingProfit.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.NetOperatingProfit.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                    @foreach (var profitLossId in profitLossIncomeTaxIds)
-                    {
-                        var assetsId = profitLossId;
-                        var desc = Model.ProfitBeforeIncomeTax.First(x => x.Id == assetsId).Description;
-                        <div>
-                            <div class="labels">@desc</div>
-
-                            @{
-                                var auditedAmt = Model.ProfitBeforeIncomeTax.Where(x => x.Id == assetsId);
-                            }
-                            @foreach (var amt in auditedAmt)
-                            {
-                                <div class="audited">@amt.Amount</div>
-                            }
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                        </div>
-                    }
-                <div class="total">
-                    <div class="labels">PROFIT (LOSS) BEFORE INCOME TAX</div>
-                    <div class="audited">@Model.ProfitBeforeIncomeTax.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.ProfitBeforeIncomeTax.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.ProfitBeforeIncomeTax.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                    @foreach (var incomeForPeriodId in incomeForPeriodIds)
-                    {
-                        var assetsId = incomeForPeriodId;
-                        var desc = Model.IncomeTaxForPeriod.First(x => x.Id == assetsId).Description;
-                        <div>
-                            <div class="labels">@desc</div>
-
-                            @{
-                                var auditedAmt = Model.IncomeTaxForPeriod.Where(x => x.Id == assetsId);
-                            }
-                            @foreach (var amt in auditedAmt)
-                            {
-                                <div class="audited">@amt.Amount</div>
-                            }
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                        </div>
-                    }
-                <div class="total">
-                    <div class="labels">INCOME FOR THE PERIOD</div>
-                    <div class="audited">@Model.IncomeTaxForPeriod.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.IncomeTaxForPeriod.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.IncomeTaxForPeriod.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                    @foreach (var totalComprehensiveId in totalComprehensiveIncomeIds)
-                    {
-                        var assetsId = totalComprehensiveId;
-                        var desc = Model.TotalComprehensiveIncome.First(x => x.Id == assetsId).Description;
-                        <div>
-                            <div class="labels">@desc</div>
-
-                            @{
-                                var auditedAmt = Model.TotalComprehensiveIncome.Where(x => x.Id == assetsId);
-                            }
-                            @foreach (var amt in auditedAmt)
-                            {
-                                <div class="audited">@amt.Amount</div>
-                            }
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                        </div>
-                    }
-                <div class="total">
-                    <div class="labels">TOTAL COMPREHENSIVE INCOME (LOSS) FOR THE PERIOD</div>
-                    <div class="audited">@Model.TotalComprehensiveIncome.Where(x=>x.YearAuditedProjected.Year==2013).Sum(x=>x.Amount)</div>
-                    <div class="audited">@Model.TotalComprehensiveIncome.Where(x => x.YearAuditedProjected.Year == 2014).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.TotalComprehensiveIncome.Where(x => x.YearAuditedProjected.Year == 2015).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                <div>
-                    <div class="labels"><span class="labelText">INCOME FOR THE PERIOD ATTRIBUTABLE TO:</span></div>
-                    <div class="audited"></div>
-                    <div class="audited"></div>
-                    <div class="audited"></div>
-                    <div class="proj"></div>
-                    <div class="proj"></div>
-                    <div class="proj"></div>
-                    <div class="proj"></div>
-                    <div class="proj"></div>
-                </div>
-                    @foreach (var equitiesId in equityIncreaseIds)
-                    {
-                        var assetsId = equitiesId;
-                        var desc = Model.EquityIncrease.First(x => x.Id == assetsId).Description;
-                        <div>
-                            <div class="labels">@desc</div>
-
-                            @{
-                                var auditedAmt = Model.EquityIncrease.Where(x => x.Id == assetsId);
-                            }
-                            @foreach (var amt in auditedAmt)
-                            {
-                                <div class="audited">@amt.Amount</div>
-                            }
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                            <div class="proj">0</div>
-                        </div>
-                    }
-                <div class="total">
-                    <div class="labels">EQUITY INCREASE</div>
-                    <div class="audited">@Model.EquityIncrease.Where(x=>x.YearAuditedProjected.Year==2013).Sum(x=>x.Amount)</div>
-                    <div class="audited">@Model.EquityIncrease.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                    <div class="audited">@Model.EquityIncrease.Where(x => x.YearAuditedProjected.Year == 2013).Sum(x => x.Amount)</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                    <div class="proj">0</div>
-                </div>
-                </div>
                 </div>
             </div>
         </div>
