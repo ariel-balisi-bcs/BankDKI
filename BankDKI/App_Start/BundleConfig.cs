@@ -83,8 +83,8 @@ namespace BankDKI
             bundles.Add(new StyleBundle("~/css/financialRatios").Include(
                         "~/Content/styles/css/financialRatios.css"));
 
-            bundles.Add(new StyleBundle("~/css/sensitivityScenarioAnalytics").Include(
-                        "~/Content/styles/css/sensitivityScenarioAnalytics.css"));
+            bundles.Add(new StyleBundle("~/css/sensitivityScenarioAnalysis").Include(
+                        "~/Content/styles/css/sensitivityScenarioAnalysis.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

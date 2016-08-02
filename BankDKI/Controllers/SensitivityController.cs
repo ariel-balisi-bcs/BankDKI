@@ -20,7 +20,7 @@ namespace BankDKI.Controllers
         //
         // GET: /Sensitivity/
 
-        public ActionResult SensitivityAndScenarioAnalytics()
+        public ActionResult SensitivityAndScenarioAnalysis()
         {
             return View();
         }

@@ -270,6 +270,7 @@
     <Content Include="Content\styles\css\main.css" />
     <Content Include="Content\styles\css\scfDirectMethod.css" />
     <Content Include="Content\styles\css\sensitivity.css" />
+    <Content Include="Content\styles\css\sensitivityScenarioAnalysis.css" />
     <Content Include="Content\styles\css\sensitivityScenarioAnalytics.css" />
     <Content Include="Content\styles\css\utilities.css" />
     <Content Include="Content\styles\css\variable.css" />
@@ -452,6 +453,7 @@
     <Content Include="Content\styles\less\scfDirectMethod.less" />
     <Content Include="Content\styles\less\financialRatios.less" />
     <Content Include="Content\styles\less\sensitivityScenarioAnalytics.less" />
+    <Content Include="Content\styles\less\sensitivityScenarioAnalysis.less" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -495,7 +497,10 @@
     <Content Include="Views\FinancialStatements\Combination.cshtml" />
     <Content Include="Views\CashFlows\DirectMethod.cshtml" />
     <Content Include="Views\Financial\Ratios.cshtml" />
-    <Content Include="Views\Sensitivity\SensitivityAndScenarioAnalytics.cshtml" />
+    <Content Include="Views\Sensitivity\SensitivityAndScenarioAnalytics.cshtml">
+      <BrowseToURL>~/Sensitivity/SensitivityAndScenarioAnalytics</BrowseToURL>
+    </Content>
+    <Content Include="Views\Sensitivity\SensitivityAndScenarioAnalysis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
